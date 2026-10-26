@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {
   AS_OF, COLUMNS, LIMITS, AGE_BUCKETS, DataError, parseCsv, validateRecords,
   dateNumber, filterTickets, ticketMetrics, decisionInsight, safeCsvValue, toCsv, exceptionsCsv,
-} from './core.mjs';
-import { GOOD_SAMPLE_ROWS, SAMPLE_CSV, FIXTURE_METADATA } from './fixtures.mjs';
+} from './core.js';
+import { GOOD_SAMPLE_ROWS, SAMPLE_CSV, FIXTURE_METADATA } from './fixtures.js';
 
 const valid = (changes = {}) => ({ ...GOOD_SAMPLE_ROWS[0], id: 'TEST-1', title: 'Fictional test ticket', status: 'Open', priority: 'High', channel: 'Email', opened_at: '2026-10-20', due_at: '2026-10-23', resolved_at: '', effort_minutes: 30, ...changes });
 const validate = rows => validateRecords(parseCsv(toCsv(rows)));

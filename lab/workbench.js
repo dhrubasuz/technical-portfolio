@@ -1,8 +1,8 @@
 import {
   AS_OF, LIMITS, COLUMNS, AGE_BUCKETS, parseCsv, validateRecords, filterTickets,
   ticketMetrics, decisionInsight, dateNumber, toCsv, exceptionsCsv,
-} from './data/core.mjs';
-import { SAMPLE_CSV, FIXTURE_METADATA } from './data/fixtures.mjs';
+} from './data/core.js';
+import { SAMPLE_CSV, FIXTURE_METADATA } from './data/fixtures.js';
 
 const $ = id => document.getElementById(id);
 const state = { result: null, name: FIXTURE_METADATA.name, sample: true, run: 0, drill: null, page: 1, visible: [], base: [], busy: false };

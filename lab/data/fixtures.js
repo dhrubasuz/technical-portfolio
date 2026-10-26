@@ -1,4 +1,4 @@
-import { AS_OF, COLUMNS, toCsv } from './core.mjs';
+import { AS_OF, COLUMNS, toCsv } from './core.js';
 
 const names = [
   'Set up shared calendar access', 'Replace a worn keyboard', 'Review a new starter checklist',

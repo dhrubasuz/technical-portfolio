@@ -84,9 +84,9 @@ Keyboard support includes tab navigation, arrow/Home/End tab switching, native f
 
 - index.html: semantic views and controls.
 - workbench.css: responsive styling and print/reduced-motion treatment.
-- workbench.mjs: local UI, upload/download and drilldown orchestration.
-- data/core.mjs: pure parser, validation, filtering, metrics and export functions.
-- data/fixtures.mjs: original reproducible fictional fixture.
+- workbench.js: local UI, upload/download and drilldown orchestration.
+- data/core.js: pure parser, validation, filtering, metrics and export functions.
+- data/fixtures.js: original reproducible fictional fixture.
 - data/fictional-service-tickets.csv: generated from that fixture.
 - data/core.test.mjs: Node built-in tests; no third-party test runner.
 
