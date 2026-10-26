@@ -23,4 +23,6 @@ jobs:
       - name: Check browser JavaScript syntax
         run: |
           node --check dist/assets/portfolio.js
-          node --check dist/lab/workbench.mjs
+          node --check dist/lab/workbench.js
+          node --check dist/lab/data/core.js
+          node --check dist/lab/data/fixtures.js

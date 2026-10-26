@@ -33,7 +33,7 @@ for(const file of html){
     links++;
   }
 }
-for(const file of files.filter(p=>extname(p)==='.mjs')){
+for(const file of files.filter(p=>['.js','.mjs'].includes(extname(p)))){
   const source=await readFile(file,'utf8');
   for(const m of source.matchAll(/from\s+['"](\.[^'"]+)['"]/g))assert.ok(await stat(resolve(dirname(file),m[1])).catch(()=>null),`${file}: missing module ${m[1]}`);
 }
