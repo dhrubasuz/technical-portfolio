@@ -6,7 +6,7 @@ This repository contains a buildless portfolio website, project case studies and
 
 ## Live portfolio
 
-[Visit the portfolio](https://dhruba-poudel-portfolio.dhrubapoudelgpt.chatgpt.site) · [Try Data Workbench](https://dhruba-poudel-portfolio.dhrubapoudelgpt.chatgpt.site/lab/)
+[Visit the portfolio](https://about.dhrub.com.np) · [Try Data Workbench](https://about.dhrub.com.np/lab/)
 
 ## Explore the work
 
@@ -57,7 +57,7 @@ This checks the data logic. It does not certify keyboard behaviour, responsive l
 
 ## About the author
 
-**Dhruba Poudel** is a Business Systems Analyst working across development, automation, data and IT service delivery. He holds a Master of Information Technology from Charles Sturt University, with a study focus in cloud computing and networking. Facebook acknowledged his responsible vulnerability disclosure in its 2018 White Hat Hall of Fame.
+**Dhruba Poudel** is a Business Systems Analyst working across development, automation, data and IT service delivery. He holds a Master of Information Technology from Charles Sturt University. Facebook acknowledged his responsible vulnerability disclosure in its 2018 White Hat Hall of Fame.
 
 [LinkedIn](https://www.linkedin.com/in/poudeldhruba/) · [GitHub](https://github.com/dhrubasuz) · [Archived Facebook acknowledgement](https://web.archive.org/web/20181204041319/https://www.facebook.com/whitehat/thanks/)
 
