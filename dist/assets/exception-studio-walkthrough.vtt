@@ -1,0 +1,30 @@
+WEBVTT
+
+NOTE Author: Dhruba Poudel
+NOTE Creator: Dhruba Poudel
+NOTE Last Modified By: Dhruba Poudel
+NOTE Silent product walkthrough. All demonstration data is fictional.
+
+00:00.000 --> 00:10.000
+Every import needs a defensible decision.
+Validate the rows. Resolve the exceptions. Preserve the evidence.
+
+00:10.000 --> 00:22.000
+Fictional sample: 22 rows imported.
+16 accepted. 6 held for review.
+
+00:22.000 --> 00:34.000
+Record a review correction separately.
+Keep the imported source value available for comparison.
+
+00:34.000 --> 00:46.000
+A stale update returns HTTP 409.
+Retain the draft, refresh the revision and review before retrying.
+
+00:46.000 --> 00:58.000
+Freeze a revision before exporting.
+The CSV and manifest belong to that revision.
+
+00:58.000 --> 01:09.000
+React + TypeScript. Node.js API. SQLite.
+Explore github.com/dhrubasuz/exception-studio

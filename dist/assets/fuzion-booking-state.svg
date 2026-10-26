@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:dp="https://dhrub.com.np/ns/metadata/" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+  <title id="title">Fuzion conceptual booking flow</title>
+  <desc id="desc">An available lesson can receive a temporary hold. Confirmation rechecks the selected slots within a database transaction before a booking is committed. Expiry releases the hold; a conflict returns a reviewable failure. Cancellation and rescheduling have their own validated transitions.</desc>
+  <metadata><rdf:RDF><rdf:Description dc:title="Fuzion conceptual booking flow" xmp:CreatorTool="Dhruba Poudel" dp:Author="Dhruba Poudel" dp:Creator="Dhruba Poudel" dp:LastModifiedBy="Dhruba Poudel"><dc:creator><rdf:Seq><rdf:li>Dhruba Poudel</rdf:li></rdf:Seq></dc:creator><dc:contributor><rdf:Seq><rdf:li>Dhruba Poudel</rdf:li></rdf:Seq></dc:contributor></rdf:Description></rdf:RDF></metadata>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#007f7b"/></marker></defs>
+  <rect width="1100" height="600" fill="#f7f6f1"/>
+  <g font-family="Arial,Helvetica,sans-serif" fill="#102b3d">
+    <text x="48" y="48" font-size="15" fill="#007f7b" letter-spacing="2" font-weight="700">FUZION / A FICTIONAL BOOKING JOURNEY</text>
+    <text x="48" y="90" font-size="30" font-weight="700">Recheck the rule at the point of change.</text>
+    <text x="48" y="119" font-size="17" fill="#52646d">Conceptual flow · A temporary interaction state is separate from the final database transaction.</text>
+    <rect x="48" y="166" width="210" height="142" rx="7" fill="#fff" stroke="#c5d3cb"/>
+    <text x="70" y="200" font-size="14" fill="#007f7b" font-weight="700">01 / DISCOVER</text>
+    <text x="70" y="237" font-size="23" font-weight="700">Available lesson</text>
+    <text x="70" y="270" font-size="17" fill="#52646d">Select a suitable slot</text>
+    <rect x="304" y="166" width="210" height="142" rx="7" fill="#e4eee7" stroke="#9ab9aa"/>
+    <text x="326" y="200" font-size="14" fill="#007f7b" font-weight="700">02 / HOLD</text>
+    <text x="326" y="237" font-size="23" font-weight="700">Temporary hold</text>
+    <text x="326" y="270" font-size="17" fill="#52646d">Expires if unfinished</text>
+    <rect x="560" y="166" width="236" height="142" rx="7" fill="#102b3d"/>
+    <text x="582" y="200" font-size="14" fill="#acd6c7" font-weight="700">03 / VALIDATE &amp; COMMIT</text>
+    <text x="582" y="237" font-size="23" fill="#fff" font-weight="700">Atomic booking</text>
+    <text x="582" y="270" font-size="17" fill="#d2dfdc">Lock · recheck · write</text>
+    <rect x="842" y="166" width="210" height="142" rx="7" fill="#e4eee7" stroke="#9ab9aa"/>
+    <text x="864" y="200" font-size="14" fill="#007f7b" font-weight="700">04 / RECORD</text>
+    <text x="864" y="237" font-size="23" font-weight="700">Booked</text>
+    <text x="864" y="270" font-size="17" fill="#52646d">Consistent saved state</text>
+    <path d="M258 237H290" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M514 237H546" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M796 237H828" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <rect x="304" y="382" width="210" height="115" rx="7" fill="#fff" stroke="#c5d3cb"/>
+    <text x="326" y="420" font-size="21" font-weight="700">Hold released</text>
+    <text x="326" y="453" font-size="17" fill="#52646d">Availability can be</text>
+    <text x="326" y="477" font-size="17" fill="#52646d">selected again</text>
+    <path d="M409 308V368" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="421" y="347" font-size="15" fill="#52646d">Expiry / release</text>
+    <rect x="560" y="382" width="236" height="115" rx="7" fill="#fff" stroke="#c5d3cb"/>
+    <text x="582" y="420" font-size="21" font-weight="700">Conflict / review</text>
+    <text x="582" y="453" font-size="17" fill="#52646d">Explain the failure;</text>
+    <text x="582" y="477" font-size="17" fill="#52646d">choose another valid slot</text>
+    <path d="M678 308V368" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="690" y="347" font-size="15" fill="#52646d">Validation fails</text>
+    <rect x="842" y="382" width="210" height="115" rx="7" fill="#fff" stroke="#c5d3cb"/>
+    <text x="864" y="420" font-size="21" font-weight="700">Change / cancel</text>
+    <text x="864" y="453" font-size="17" fill="#52646d">Separate validated</text>
+    <text x="864" y="477" font-size="17" fill="#52646d">state transition</text>
+    <path d="M947 308V368" fill="none" stroke="#007f7b" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M48 539H1052" stroke="#c5d3cb"/>
+    <text x="48" y="570" font-size="15" fill="#52646d">Dhruba Poudel · Original conceptual diagram · Live signed-in acceptance remains a separate check</text>
+  </g>
+</svg>

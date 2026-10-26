@@ -2,20 +2,24 @@
 
 Practical work across software development, automation, data analysis and IT operations.
 
-This repository contains a buildless portfolio website, project case studies and browser-based data and machine-learning demonstrations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
+This repository contains a buildless portfolio website, ten selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
 
 ## Live portfolio
 
 [Visit the portfolio](https://about.dhrub.com.np) · [Try Data Workbench](https://about.dhrub.com.np/lab/) · [Try Triage Lab](https://about.dhrub.com.np/ai-lab/)
+
+[Try Exception Studio](https://studio.dhrub.com.np/) · Hosted fictional-data workflow verified **27 October 2026**. This is a separate full-stack application; source and local run instructions are in [its repository](https://github.com/dhrubasuz/exception-studio).
 
 ## Explore the work
 
 | Project | Purpose | Scope |
 | --- | --- | --- |
 | [FigureRelay](https://github.com/dhrubasuz/FigureRelay) | Keep linked figures consistent across reports and presentations, then review and export an exact revision. | Separate local Python/FastAPI, SQLite and React/TypeScript prototype; Apache-2.0. |
+| [Exception Studio](dist/cases/exception-studio.html) | Preserve an operational source, resolve exceptions with reasons and freeze a reviewed CSV with a manifest. | Live React/TypeScript, Node 24 and SQLite demonstration; bundled fictional fixtures and anonymous 24-hour sandboxes. Hosted walkthrough verified 27 October 2026. |
 | [DataWorkbench](dist/lab/index.html) | Inspect a fictional service-operations dataset, validate CSV rows, explore metrics and review exceptions. | HTML/CSS/JavaScript demonstration; data processing stays in browser memory. |
 | [PocketArcade](https://arcade.suzata.com.np) | Explore a browser-game collection with Relaxed/Classic play pace and device-local best scores. | Existing public browser demonstration; its private source is not copied into this repository. |
 | [Fuzion Driving School](https://fuziondrivingschool.com.au/) | Connect a responsive service website to developed booking and learner/instructor workflows. | Live public website; signed-in operational acceptance is separate. Private source. |
+| [Zamtas websites](dist/cases/zamtas-websites.html) | Present specialist corporate/door-system information and a separate traffic-products catalogue. | Website design and development; two public WordPress websites presented as one paired case. Private source and operational records remain separate. |
 | [MRR Free Tools](https://tools.dhrub.com.np/) | Support everyday document, image and data tasks in a TypeScript browser workspace. | Live guide and application; supported local-file workflows have documented format/network limits. Private source. |
 | AlloyPDF | Integrate document workflows into a dedicated React/TypeScript PDF workspace. | Internal development build; local browser tools and private-service foundations have separate availability. Private source; open-source engines credited. |
 | Helpdesk Air | Connect queues, configurable workflows, service targets and persisted operational reporting. | Controlled Python/FastAPI/PostgreSQL test environment; separate Zammad self-hosted package. Private source and records. |
@@ -35,7 +39,23 @@ python -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 Open `http://127.0.0.1:8000/` for the portfolio, `/lab/` for DataWorkbench and `/ai-lab/` for Triage Lab. Stop the server with Ctrl+C. A static host can publish the same `dist/` directory; no backend service is required for these pages.
 
-FigureRelay is a separate application. Follow [its own setup and demonstration instructions](https://github.com/dhrubasuz/FigureRelay) rather than expecting the Python reporting service to run inside this static site.
+FigureRelay and Exception Studio are separate applications. Follow [FigureRelay's instructions](https://github.com/dhrubasuz/FigureRelay) or [Exception Studio's instructions](https://github.com/dhrubasuz/exception-studio) rather than expecting their services to run inside this static site.
+
+## Exception Studio evidence
+
+Exception Studio connects a real same-origin HTTP API to persistent SQLite state. It retains original source values separately from corrections, requires explicit decisions for original exceptions, rejects stale revisions, replays matching idempotent commands, and freezes CSV bytes with reconciliation counts and SHA-256 values.
+
+On **27 October 2026**, its **48 automated checks passed: 35 domain/store/HTTP checks and 13 UI checks**. They cover concurrent decisions, invalid-correction rollback, exact retry replay, source immutability, frozen downloads after a database reopen, isolation and limits, and client recovery from stale or uncertain responses. UI checks use a simulated DOM; browser and hosted checks are retained as separate evidence, and full accessibility conformance is not claimed.
+
+The **public HTTPS walkthrough was verified on 27 October 2026**: import 22 fictional rows, complete six explicit decisions, and publish revision 7 with 21 accepted, 0 held, 1 excluded and 1,405 accepted minutes. The downloaded 1,270-byte CSV's SHA-256 matched its manifest. The host-only `__Host-` cookie had `Secure`, `HttpOnly` and `SameSite=Lax`; the checked browser run produced no warning or error. This is evidence for that demonstrated workflow, not every possible hosted failure case.
+
+Only bundled fictional fixtures are accepted. Review notes reach the server and must remain fictional. Anonymous sandboxes expire after 24 hours, public storage may reset on redeployment, and application cleanup does not promise secure erasure. There are no verified organisational approval identities or production-service claims. See the [case study](dist/cases/exception-studio.html) and [application security scope](https://github.com/dhrubasuz/exception-studio/blob/main/SECURITY.md).
+
+## Commercial website evidence
+
+The paired Zamtas case showcases the website design and development by Dhruba Poudel for [zamtas.com.au](https://zamtas.com.au/) and [zamtastraffic.com.au](https://zamtastraffic.com.au/). It uses public homepage images and an original experience map, without publishing private administration screens or claiming measured business results.
+
+Fuzion's public website is live; signed-in acceptance and actual notification receipt are separate. Two private scheduling-domain suites were freshly checked on **27 October 2026: 14 tests passed**, covering Sydney daylight-saving transitions, closures, recurring selections, booking conflicts and package-price allocation. The **230 checks** reported in the **9 October release record** are historical evidence from that release, not the count rerun on 27 October. No real bookings or provider workflows were exercised by the fresh domain check.
 
 ## DataWorkbench demonstration
 
