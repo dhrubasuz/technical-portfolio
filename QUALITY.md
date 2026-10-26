@@ -12,7 +12,7 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and follow all ten selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case.
+- Serve `dist/` and follow all eleven selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.

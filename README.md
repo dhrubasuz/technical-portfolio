@@ -2,7 +2,7 @@
 
 Practical work across software development, automation, data analysis and IT operations.
 
-This repository contains a buildless portfolio website, ten selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
+This repository contains a buildless portfolio website, eleven selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
 
 ## Live portfolio
 
@@ -19,6 +19,7 @@ This repository contains a buildless portfolio website, ten selected projects, a
 | [DataWorkbench](dist/lab/index.html) | Inspect a fictional service-operations dataset, validate CSV rows, explore metrics and review exceptions. | HTML/CSS/JavaScript demonstration; data processing stays in browser memory. |
 | [PocketArcade](https://arcade.suzata.com.np) | Explore a browser-game collection with Relaxed/Classic play pace and device-local best scores. | Existing public browser demonstration; its private source is not copied into this repository. |
 | [Fuzion Driving School](https://fuziondrivingschool.com.au/) | Connect a responsive service website to developed booking and learner/instructor workflows. | Live public website; signed-in operational acceptance is separate. Private source. |
+| [Commerce Reconcile & Commerce Canvas](dist/cases/commerce-reconcile.html) | Review commerce-event differences with an original WordPress plugin and PHP engine; explore a custom theme and brand system. | Original public source, fictional-data PHP demo and static theme preview. Actual local WordPress/WooCommerce execution documented separately. |
 | [Zamtas websites](dist/cases/zamtas-websites.html) | Present specialist corporate/door-system information and a separate traffic-products catalogue. | Website design and development; two public WordPress websites presented as one paired case. Private source and operational records remain separate. |
 | [MRR Free Tools](https://tools.dhrub.com.np/) | Support everyday document, image and data tasks in a TypeScript browser workspace. | Live guide and application; supported local-file workflows have documented format/network limits. Private source. |
 | AlloyPDF | Integrate document workflows into a dedicated React/TypeScript PDF workspace. | Internal development build; local browser tools and private-service foundations have separate availability. Private source; open-source engines credited. |
