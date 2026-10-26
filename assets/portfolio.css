@@ -326,3 +326,12 @@ p + p { margin-top: 1rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Selected project illustrations and public-source recognition. */
+.tools-visual { background: #e5eaf0; }
+.tool-tiles { width: min(100%, 300px); display: grid; grid-template-columns: 1fr 1fr; gap: 14px; transform: rotate(-3deg); }
+.tool-tiles span { display: grid; place-items: center; min-height: 78px; background: #fffefa; border: 1px solid #bdc9cf; border-radius: 5px; color: #234659; font-size: .85rem; letter-spacing: .08em; box-shadow: 0 6px 18px rgba(16,43,61,.04); }
+.tool-tiles span:nth-child(2), .tool-tiles span:nth-child(3) { color: #006b65; background: #edf5ef; }
+.art-caption { font-size: .7rem; color: #49665f; text-align: center; margin-top: 20px; }
+.about-fact .recognition-proof { font-size: .77rem; line-height: 1.75; margin-top: 10px; }
+.recognition-proof a { font-size: inherit; }
