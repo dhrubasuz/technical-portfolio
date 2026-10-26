@@ -27,6 +27,12 @@ This repository contains a buildless portfolio website, ten selected projects, a
 
 The website's [case studies](dist/index.html) explain the problem, personal contribution, technical approach and current boundaries of each project. A public demonstration is not a claim of production qualification, enterprise security controls or mobile app-store publication.
 
+## Development and design capabilities
+
+I build custom WordPress themes and plugins, integrate APIs, and develop responsive websites and WooCommerce stores with payment integrations. I also create logos and brand identities.
+
+These capabilities match my LinkedIn About and Skills sections. Individual case studies describe the contribution and delivery stage for that project.
+
 ## Run the portfolio locally
 
 The website uses HTML, CSS and vanilla JavaScript. There is no package installation or build step. Serve `dist/` through a static HTTP server so both demonstrations' ES modules load correctly.
