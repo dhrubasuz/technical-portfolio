@@ -1,0 +1,11 @@
+# Author: Dhruba Poudel
+# Creator: Dhruba Poudel
+# Last Modified By: Dhruba Poudel
+
+DirectoryIndex index.html
+Options -Indexes
+
+<IfModule mod_mime.c>
+  AddType application/javascript .mjs .js
+  AddCharset UTF-8 .html .css .js .mjs .csv
+</IfModule>
