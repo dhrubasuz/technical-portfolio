@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="An inspectable machine-learning prototype by Dhruba Poudel: train a small text classifier, inspect the evidence, evaluate fixed fictional requests and keep a person in the decision.">
+  <meta name="theme-color" content="#102b3d">
+  <title>Triage Lab — Dhruba Poudel</title>
+  <link rel="stylesheet" href="./triage.css">
+  <script type="module" src="./triage.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to Triage Lab</a>
+  <header class="site-header">
+    <a class="back-link" href="../index.html#work"><span aria-hidden="true">↖</span> Dhruba Poudel <span class="back-label">/ selected work</span></a>
+    <span class="header-note"><span class="status-dot" aria-hidden="true"></span> Applied ML prototype</span>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">A suggestion, with evidence</p>
+        <h1 id="page-title">A model can suggest.<br><em>A person decides.</em></h1>
+        <p class="hero-copy">Train a small text classifier. Inspect the words behind its suggestion. Check the results on requests it did not learn from.</p>
+        <div class="hero-tags"><span>Original JavaScript</span><span>Classical machine learning</span><span>Fictional data</span></div>
+      </div>
+      <aside class="hero-aside" aria-label="Prototype details">
+        <p class="mini-label">TRIAGE LAB <span class="edition">02</span></p>
+        <dl><div><dt>Built by</dt><dd>Dhruba Poudel</dd></div><div><dt>Model</dt><dd>Multinomial Naive Bayes</dd></div><div><dt>Processing</dt><dd>In page memory</dd></div></dl>
+        <p>An educational prototype. No language-model API, external ticket system or automated dispatch.</p>
+      </aside>
+    </section>
+
+    <div id="app-error" class="app-error" hidden role="alert">The demonstration could not start. Refresh the page or inspect the source and tests linked below.</div>
+    <p id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section id="workspace" class="workspace" aria-label="Interactive Triage Lab">
+      <div class="workspace-top"><div class="workspace-brand"><span class="brand-symbol" aria-hidden="true">⌘</span><span>Triage Lab<small>Learn → explain → review</small></span></div><span class="snapshot">Prototype / 26 October 2026</span></div>
+      <nav class="section-nav" aria-label="Demonstration sections"><a href="#try">01 Try a request</a><a href="#evaluation">02 Evaluate</a><a href="#method">03 Inspect the method</a></nav>
+      <div class="model-strip" id="model-summary">Training the small model from fictional examples…</div>
+
+      <section class="panel" id="try" aria-labelledby="try-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / Keep the decision visible</p><h2 id="try-title">From request to reviewed category.</h2><p>Use a fictional example or write a generic request. Keep personal, employer and client information out of this public demonstration.</p></div><span class="pill">No external actions</span></div>
+        <div class="try-layout">
+          <form id="request-form" class="request-card">
+            <label for="example-picker">Start with an example</label>
+            <select id="example-picker"><option value="access">Account request</option><option value="device">Device problem</option><option value="connectivity">Connectivity issue</option><option value="application">Application problem</option><option value="mixed">Mixed request</option><option value="unfamiliar">Outside the model's scope</option></select>
+            <label for="request-text">Request text</label>
+            <textarea id="request-text" rows="6" maxlength="1200" aria-describedby="request-help character-count">Please reset my forgotten password so I can sign in to my account.</textarea>
+            <div class="field-bottom"><span id="request-help">Generic English text · maximum 1,200 characters</span><span id="character-count">0 / 1,200</span></div>
+            <button class="button button-primary" type="submit">Suggest a category <span aria-hidden="true">→</span></button>
+            <p class="small">The model learns from bundled fictional examples. Your input does not retrain it, leave this page through the demo, or create a ticket.</p>
+          </form>
+          <section class="result-card" aria-labelledby="result-title" aria-busy="false" id="result-card">
+            <div class="result-heading"><p class="mini-label">MODEL SUGGESTION</p><span class="pill" id="review-flag">Review required</span></div>
+            <h3 id="result-title">Ready for a fictional request.</h3>
+            <p class="result-note" id="result-note">A human chooses the final category in every case.</p>
+            <div id="score-bars" class="score-bars" aria-label="Relative model scores"></div>
+            <p class="score-caution">Relative model scores compare these four categories. They are <strong>not calibrated confidence</strong> and do not prove a request belongs to any of them.</p>
+            <div id="gate-reasons" class="gate-reasons" hidden></div>
+            <div class="evidence-heading"><h4>What influenced the suggestion?</h4><span class="small" id="coverage-note"></span></div>
+            <p class="small">Positive contributions favour the leading category; negative contributions favour its nearest alternative. These are learned word associations, not an understanding of the request.</p>
+            <div id="evidence-terms" class="evidence-terms"></div>
+            <p class="small" id="unknown-note"></p>
+          </section>
+        </div>
+
+        <section class="human-card" aria-labelledby="human-title">
+          <div><p class="eyebrow">The person remains responsible</p><h3 id="human-title">Choose the category you would use.</h3><p>Inspect the request and suggestion, then make your own selection. Recording it only updates this page's temporary review list.</p></div>
+          <form id="review-form"><label for="human-category">Your category</label><div class="review-controls"><select id="human-category" required><option value="">Choose a category…</option></select><button class="button button-primary" type="submit" id="confirm-review" disabled>Record my review</button></div><p class="small" id="review-help">No option is selected for you. This is a local review exercise, not a ticket approval or audit service.</p></form>
+        </section>
+        <section class="review-list" aria-labelledby="review-list-title"><div class="table-heading"><div><h3 id="review-list-title">Your local review list</h3><p>Up to six decisions in page memory. Refreshing clears them.</p></div><button type="button" id="clear-reviews" class="text-button" disabled>Clear list</button></div><div id="reviews-empty" class="empty-state">No reviewed decisions yet. Model output alone does not create one.</div><div id="reviews-table-wrap" class="table-scroll" hidden><table><caption class="sr-only">Human decisions made in this page</caption><thead><tr><th scope="col">Local ID / request</th><th scope="col">Model suggested</th><th scope="col">Human selected</th></tr></thead><tbody id="reviews-body"></tbody></table></div></section>
+      </section>
+
+      <section class="panel evaluation-panel" id="evaluation" aria-labelledby="evaluation-title">
+        <div class="section-heading"><div><p class="eyebrow">02 / Measure the behaviour</p><h2 id="evaluation-title">The evaluation stays in view.</h2><p>The displayed results are calculated from a fixed held-out fictional set. Every example counts, including mistakes and requests flagged for closer review.</p></div><span class="pill neutral-pill">Small teaching dataset</span></div>
+        <div id="evaluation-metrics" class="metrics"></div>
+        <p id="evaluation-reconciliation" class="reconciliation"></p>
+        <div class="evaluation-grid"><section class="chart-card" aria-labelledby="matrix-title"><div class="table-heading"><div><h3 id="matrix-title">Confusion matrix</h3><p>Rows: actual category. Columns: model's top category.</p></div></div><div id="matrix-container" class="table-scroll"></div></section><section class="chart-card" aria-labelledby="class-metrics-title"><div class="table-heading"><div><h3 id="class-metrics-title">Per-category results</h3><p>Precision, recall and F1 include all held-out records.</p></div></div><div id="class-metrics-container" class="table-scroll"></div></section></div>
+        <div class="evaluation-notes"><p id="selective-note"></p><p id="validation-note"></p><p>These hand-authored examples are not an independent benchmark or evidence of production accuracy. Shared vocabulary, small sample size and a single author limit what can be concluded. Zero-division metrics are shown as 0.</p></div>
+        <details class="detail-block" open><summary id="evaluation-results-summary">Inspect every held-out prediction</summary><div class="table-scroll"><table class="results-table"><caption class="sr-only">All fixed held-out evaluation requests and model outcomes</caption><thead><tr><th scope="col">Fictional request</th><th scope="col">Actual</th><th scope="col">Top category</th><th scope="col">Outcome / review policy</th></tr></thead><tbody id="evaluation-results"></tbody></table></div></details>
+        <details class="detail-block"><summary id="challenge-summary">Ambiguous and unfamiliar requests</summary><p class="small">These separate challenge examples are intended for review. The table shows where the simple gate flags them and where it misses them. No challenge record is used to train the model or counted in the held-out accuracy above.</p><div class="table-scroll"><table class="results-table"><caption class="sr-only">Separate challenge requests and review-gate behaviour</caption><thead><tr><th scope="col">Fictional challenge</th><th scope="col">Top category</th><th scope="col">Gate behaviour</th><th scope="col">Reason for human review</th></tr></thead><tbody id="challenge-results"></tbody></table></div></details>
+      </section>
+
+      <section class="panel method-panel" id="method" aria-labelledby="method-title"><div class="section-heading"><div><p class="eyebrow">03 / Make the method inspectable</p><h2 id="method-title">Small model. Clear boundaries.</h2><p>This is supervised, classical machine learning implemented in JavaScript. It is not an LLM or generative-AI system.</p></div></div>
+        <div class="method-grid"><section><span class="step-number">01</span><h3>Fit on training data only</h3><p>Lowercase English tokens become word counts. Class priors and smoothed word likelihoods are learned from the training partition. Validation and held-out text do not enter the vocabulary or fitted counts.</p><p class="formula">log P(class) + Σ count(word) × log P(word | class)</p></section><section><span class="step-number">02</span><h3>Explain the association</h3><p>The largest word contributions compare the leading class with the runner-up. Laplace smoothing uses α = 1. Unknown words are ignored by the classifier and remain visible in its coverage note.</p><p>Word order and meaning are not modelled. Negation, mixed topics, unfamiliar language and repeated words can mislead it.</p></section><section><span class="step-number">03</span><h3>Apply a separate review gate</h3><p>The fixed heuristic flags fewer than two distinct known words, vocabulary coverage below 45%, or a leading log-score gap below 0.25 per recognised word. It is not a learned detector or a guarantee of correctness.</p><p>These thresholds were set before evaluating the bundled held-out set. Every decision still requires human selection.</p></section></div>
+        <details class="detail-block"><summary>Inspect the dataset and fitted model</summary><p id="dataset-note" class="small"></p><div class="model-inspection"><div id="training-stats" class="table-scroll"></div><div><h4>Training vocabulary</h4><p class="small">Built from training records only. No stemming or stop-word removal.</p><p id="vocabulary" class="vocabulary"></p></div></div><p class="small" id="partition-audit"></p><p class="small">Partition checks catch repeated IDs and identical tokenised text. They do not prove semantic independence or detect every near-paraphrase.</p></details>
+        <div class="source-links"><a href="https://github.com/dhrubasuz/technical-portfolio/tree/main/dist/ai-lab" target="_blank" rel="noopener noreferrer">Read the implementation <span aria-hidden="true">↗</span></a><a href="https://scikit-learn.org/stable/modules/naive_bayes.html" target="_blank" rel="noopener noreferrer">Naive Bayes method reference <span aria-hidden="true">↗</span></a><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html" target="_blank" rel="noopener noreferrer">Metric definitions <span aria-hidden="true">↗</span></a></div>
+        <p class="privacy-note"><strong>Data boundary:</strong> this page loads static assets from its host. Request text and review decisions are processed in page memory; the demo has no API calls, storage, accounts, telemetry or ticket integration. The demo does not save entered text or decisions; reinitialising the page clears its review list. Your browser may independently restore form text. Use fictional information.</p>
+      </section>
+      <div class="workspace-bottom"><span><span class="status-dot" aria-hidden="true"></span> Dhruba Poudel · original educational implementation</span><span>Suggestions are separate from decisions.</span></div>
+    </section>
+  </main>
+  <footer><span>Designed and developed by Dhruba Poudel.</span><a href="../index.html#work">Return to selected work <span aria-hidden="true">↗</span></a></footer>
+  <noscript><p class="noscript">JavaScript is required to train and inspect the model. Read the source and methodology using the links above.</p></noscript>
+</body>
+</html>

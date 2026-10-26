@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Validate data logic
-        run: node --test dist/lab/data/core.test.mjs
+      - name: Validate data and classification logic
+        run: node --test dist/lab/data/core.test.mjs dist/ai-lab/data/model.test.mjs
       - name: Check pages and assets
         run: node scripts/check_site.mjs
       - name: Check browser JavaScript syntax
@@ -26,3 +26,6 @@ jobs:
           node --check dist/lab/workbench.js
           node --check dist/lab/data/core.js
           node --check dist/lab/data/fixtures.js
+          node --check dist/ai-lab/triage.js
+          node --check dist/ai-lab/data/model.js
+          node --check dist/ai-lab/data/fixtures.js

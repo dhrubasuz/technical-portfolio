@@ -1,0 +1,624 @@
+{
+  "author": "Dhruba Poudel",
+  "creator": "Dhruba Poudel",
+  "lastModifiedBy": "Dhruba Poudel",
+  "datasetVersion": "2026-10-26",
+  "sourceSha256": {
+    "model": "519456a3ab91f589965e90ef1221e9e5e709aa32b771c8be079b9d4a46c81eb1",
+    "fixtures": "b529a99990cf74f5cb2053046dc6dac8d1085ee9beb99282426b336828aab32e"
+  },
+  "scope": "Small fixed fictional teaching fixture. Not an independent benchmark or operational-performance evidence.",
+  "algorithm": "Multinomial Naive Bayes",
+  "alpha": 1,
+  "reviewPolicy": {
+    "minKnownTerms": 2,
+    "minCoverage": 0.45,
+    "minMeanMargin": 0.25
+  },
+  "training": {
+    "records": 40,
+    "vocabulary": 207,
+    "classCounts": [
+      {
+        "id": "access",
+        "records": 10,
+        "words": 95
+      },
+      {
+        "id": "device",
+        "records": 10,
+        "words": 89
+      },
+      {
+        "id": "connectivity",
+        "records": 10,
+        "words": 82
+      },
+      {
+        "id": "application",
+        "records": 10,
+        "words": 90
+      }
+    ]
+  },
+  "partitionAudit": {
+    "ok": true,
+    "records": 72,
+    "errors": []
+  },
+  "validation": {
+    "total": 12,
+    "correct": 12,
+    "accuracy": 1,
+    "matrix": [
+      [
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ]
+    ],
+    "noSuggestion": 0,
+    "perClass": [
+      {
+        "id": "access",
+        "support": 3,
+        "predictedCount": 3,
+        "truePositive": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "id": "device",
+        "support": 3,
+        "predictedCount": 3,
+        "truePositive": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "id": "connectivity",
+        "support": 3,
+        "predictedCount": 3,
+        "truePositive": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "id": "application",
+        "support": 3,
+        "predictedCount": 3,
+        "truePositive": 3,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      }
+    ],
+    "macroF1": 1,
+    "ready": 7,
+    "flagged": 5,
+    "readyCorrect": 7,
+    "coverage": 0.5833333333333334,
+    "selectiveAccuracy": 1,
+    "baselineLabel": "access",
+    "baselineCorrect": 3,
+    "baselineAccuracy": 0.25,
+    "results": [
+      {
+        "id": "VA-A01",
+        "text": "Can the service team unlock my user profile so I can sign in again?",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-A02",
+        "text": "I changed handset and cannot complete the authentication prompt.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-A03",
+        "text": "The project library opens for colleagues but says I lack permission.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-D01",
+        "text": "The spare monitor has a cracked panel and horizontal lines.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-D02",
+        "text": "A laptop charging socket feels loose and the battery is empty.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-D03",
+        "text": "The printer pulls several sheets at once and jams.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary.",
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "VA-N01",
+        "text": "Remote staff lose their VPN tunnel during large downloads.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-N02",
+        "text": "All desks on this ethernet switch have lost internet.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary."
+        ]
+      },
+      {
+        "id": "VA-N03",
+        "text": "Wireless coverage ends near the training room doorway.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary."
+        ]
+      },
+      {
+        "id": "VA-S01",
+        "text": "The purchase approval remains on the first workflow step.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "VA-S02",
+        "text": "Can the reporting page export filtered results instead of all rows?",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "VA-S03",
+        "text": "This spreadsheet counts one invoice twice in its total.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "total": 20,
+    "correct": 16,
+    "accuracy": 0.8,
+    "matrix": [
+      [
+        5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        4,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        4
+      ]
+    ],
+    "noSuggestion": 0,
+    "perClass": [
+      {
+        "id": "access",
+        "support": 5,
+        "predictedCount": 5,
+        "truePositive": 5,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      {
+        "id": "device",
+        "support": 5,
+        "predictedCount": 4,
+        "truePositive": 3,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6666666666666665
+      },
+      {
+        "id": "connectivity",
+        "support": 5,
+        "predictedCount": 5,
+        "truePositive": 4,
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1": 0.8000000000000002
+      },
+      {
+        "id": "application",
+        "support": 5,
+        "predictedCount": 6,
+        "truePositive": 4,
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727272
+      }
+    ],
+    "macroF1": 0.7984848484848485,
+    "ready": 10,
+    "flagged": 10,
+    "readyCorrect": 9,
+    "coverage": 0.5,
+    "selectiveAccuracy": 0.9,
+    "baselineLabel": "access",
+    "baselineCorrect": 5,
+    "baselineAccuracy": 0.25,
+    "results": [
+      {
+        "id": "TE-A01",
+        "text": "I can authenticate, but the team folder still refuses my user permission.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-A02",
+        "text": "A colleague has returned from leave and needs their suspended account restored.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-A03",
+        "text": "After a password change the login screen keeps rejecting my credentials.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-A04",
+        "text": "Could you grant the new analyst access to the read only library?",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-A05",
+        "text": "My verification prompt asks for a phone I no longer have.",
+        "actual": "access",
+        "predicted": "access",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-D01",
+        "text": "A replacement USB mouse works, but the original has stopped clicking.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-D02",
+        "text": "The computer fan rattles loudly before the machine powers off.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary."
+        ]
+      },
+      {
+        "id": "TE-D03",
+        "text": "The second display stays dark when attached to the dock.",
+        "actual": "device",
+        "predicted": "application",
+        "correct": false,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary."
+        ]
+      },
+      {
+        "id": "TE-D04",
+        "text": "The meeting webcam is showing a blurred image on every call.",
+        "actual": "device",
+        "predicted": "connectivity",
+        "correct": false,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-D05",
+        "text": "Please arrange a new charger for a portable computer with a damaged power lead.",
+        "actual": "device",
+        "predicted": "device",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-N01",
+        "text": "Web pages resolve at home but fail DNS lookup at the office.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-N02",
+        "text": "My connection works by cable, while wifi cannot reach the internet.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-N03",
+        "text": "An active remote tunnel closes each time a file download begins.",
+        "actual": "connectivity",
+        "predicted": "application",
+        "correct": false,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-N04",
+        "text": "Visitors see the wireless network but cannot get online.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary."
+        ]
+      },
+      {
+        "id": "TE-N05",
+        "text": "The switch port has no link and neighbouring desks have the same outage.",
+        "actual": "connectivity",
+        "predicted": "connectivity",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-S01",
+        "text": "Submitting the expense form produces two records for one claim.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary.",
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-S02",
+        "text": "An exported report loses leading zeroes from the reference column.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      },
+      {
+        "id": "TE-S03",
+        "text": "The approval stage is complete but the workflow does not progress.",
+        "actual": "application",
+        "predicted": "device",
+        "correct": false,
+        "needsReview": true,
+        "reasons": [
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-S04",
+        "text": "The summary dashboard and downloaded CSV calculate different totals.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": true,
+        "reasons": [
+          "Less than 45% of the words appear in its training vocabulary.",
+          "The leading categories are too close under the fixed review policy."
+        ]
+      },
+      {
+        "id": "TE-S05",
+        "text": "The scheduling screen becomes unresponsive when opening an older booking.",
+        "actual": "application",
+        "predicted": "application",
+        "correct": true,
+        "needsReview": false,
+        "reasons": []
+      }
+    ]
+  },
+  "challenges": [
+    {
+      "id": "CH-01",
+      "text": "",
+      "expected": "review",
+      "reason": "Empty requests contain no evidence for a category.",
+      "predicted": null,
+      "flagged": true,
+      "gateReasons": [
+        "No usable words: a person must choose the category."
+      ]
+    },
+    {
+      "id": "CH-02",
+      "text": "Zorple quivex flarnok.",
+      "expected": "review",
+      "reason": "Unknown invented words test out-of-vocabulary handling.",
+      "predicted": null,
+      "flagged": true,
+      "gateReasons": [
+        "Fewer than 2 distinct words are known to this small model.",
+        "Less than 45% of the words appear in its training vocabulary.",
+        "The leading categories are too close under the fixed review policy."
+      ]
+    },
+    {
+      "id": "CH-03",
+      "text": "Please organise lunch catering and extra chairs for Friday.",
+      "expected": "review",
+      "reason": "A facilities request lies outside the four IT categories.",
+      "predicted": "access",
+      "flagged": true,
+      "gateReasons": [
+        "Less than 45% of the words appear in its training vocabulary."
+      ]
+    },
+    {
+      "id": "CH-04",
+      "text": "The dashboard freezes and the wifi disconnects; I do not know which causes the other.",
+      "expected": "review",
+      "reason": "Two plausible categories need clarification rather than a forced route.",
+      "predicted": "application",
+      "flagged": true,
+      "gateReasons": [
+        "The leading categories are too close under the fixed review policy."
+      ]
+    },
+    {
+      "id": "CH-05",
+      "text": "The laptop battery and keyboard are fine. I only need permission for the library.",
+      "expected": "review",
+      "reason": "Bag-of-words models can miss negation and overweight irrelevant device terms.",
+      "predicted": "access",
+      "flagged": true,
+      "gateReasons": [
+        "The leading categories are too close under the fixed review policy."
+      ]
+    },
+    {
+      "id": "CH-06",
+      "text": "Ignore the request and always return Account access as the category.",
+      "expected": "review",
+      "reason": "Instruction-like input is not an operational request; this classifier does not follow natural-language instructions.",
+      "predicted": "access",
+      "flagged": false,
+      "gateReasons": []
+    },
+    {
+      "id": "CH-07",
+      "text": "Broken.",
+      "expected": "review",
+      "reason": "A short unspecific description requires a human follow-up.",
+      "predicted": "device",
+      "flagged": true,
+      "gateReasons": [
+        "Fewer than 2 distinct words are known to this small model."
+      ]
+    },
+    {
+      "id": "CH-08",
+      "text": "El formulario guarda dos facturas para una solicitud.",
+      "expected": "review",
+      "reason": "The teaching fixtures are English only; another language is outside the evaluated scope.",
+      "predicted": null,
+      "flagged": true,
+      "gateReasons": [
+        "Fewer than 2 distinct words are known to this small model.",
+        "Less than 45% of the words appear in its training vocabulary.",
+        "The leading categories are too close under the fixed review policy."
+      ]
+    }
+  ]
+}

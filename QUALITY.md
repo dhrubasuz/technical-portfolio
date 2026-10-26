@@ -12,7 +12,7 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and open the homepage, all case studies and `/lab/`.
+- Serve `dist/` and open the homepage, all case studies, `/lab/` and `/ai-lab/`.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.
@@ -39,6 +39,31 @@ Then check the browser workflow with fictional information:
 7. Confirm that local CSV contents are not submitted to a backend endpoint and that refreshing the page does not imply durable storage of an uploaded file.
 
 Do not describe this demonstration as a production service, live operational dashboard, authenticated approval system or immutable audit log.
+
+## Triage Lab checks
+
+Run the model and evaluation checks from the repository root:
+
+```sh
+node --test dist/ai-lab/data/model.test.mjs
+node dist/ai-lab/evaluate.mjs
+```
+
+The 21 model tests cover hand-calculated priors, smoothed likelihoods, log scores and word-evidence reconciliation; numerical stability; unknown/empty inputs; separate review heuristics; input bounds; partition checks; training-only fitting; evaluation denominators and metric arithmetic; explicit human decisions; and runtime dependency/rendering boundaries. The reproducible snapshot contains model/fixture source fingerprints and all prediction outcomes.
+
+The first unchanged fixture yields 16/20 correct held-out top categories, baseline 5/20 and macro F1 approximately 0.7985. Ten held-out requests are flagged; one incorrect prediction passes the gate. Seven of eight challenge requests are flagged. Preserve all four held-out errors and the unflagged challenge, rather than tuning or removing them to improve the display. These are small synthetic implementation results, not independent operational evidence.
+
+Browser verification remains separate:
+
+1. Inspect desktop and narrow-screen layouts, keyboard focus, labels, status announcements and horizontally scrollable tables.
+2. Confirm successful model start-up and local asset loading without console errors. The demo must make no API or external dependency request.
+3. Try every fictional example, a blank request and unfamiliar text. Check relative-score wording, recognised/unknown terms and closer-review reasons.
+4. Confirm the human category starts empty and that edited input invalidates the prior suggestion. Deliberately choose a different category and inspect the recorded distinction. Model output alone must not create a review decision.
+5. Confirm the six-decision limit, clear-list action and a reinitialised page clearing the review list. The browser may independently restore form text.
+6. Inspect all 20 held-out outcomes and eight challenges. Reconcile matrix, metrics, errors, flagged/pass counts and separate selected-subset results.
+7. Verify the homepage's Applied ML filter, Triage Lab card, source link and return navigation after integration and publication.
+
+Do not describe this classical ML prototype as an LLM, generative-AI service, production classifier, autonomous workflow, calibrated confidence estimator or evidence of measured business time savings. It uses fictional data, English word counts and a separate limited review heuristic. No private tickets, real identities or external dispatch are included.
 
 ## FigureRelay evidence
 
