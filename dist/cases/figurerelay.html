@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="FigureRelay: a local reporting prototype by Dhruba Poudel, connecting named source figures to reports and slides through explicit review and export.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="FigureRelay — Dhruba Poudel">
+  <meta property="og:description" content="A local reporting prototype connecting named figures, linked occurrences, explicit approval and document export.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://dhruba-poudel-portfolio.dhrubapoudelgpt.chatgpt.site/cases/figurerelay.html">
+  <meta property="og:image" content="https://dhruba-poudel-portfolio.dhrubapoudelgpt.chatgpt.site/assets/figurerelay-review.png">
+  <meta property="og:image:alt" content="FigureRelay prototype review interface using sample reporting data">
+  <link rel="canonical" href="https://dhruba-poudel-portfolio.dhrubapoudelgpt.chatgpt.site/cases/figurerelay.html">
+  <title>FigureRelay — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css">
+  <script src="../assets/portfolio.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+        <a href="../index.html#work">Selected work</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#work"><span aria-hidden="true">←</span> All selected work</a>
+      <div class="case-hero-grid">
+        <div>
+          <p class="eyebrow">Case study 01 · Reporting software</p>
+          <h1>FigureRelay</h1>
+          <p class="case-lead">One named figure. Every linked occurrence. An explicit review before export.</p>
+          <div class="case-links">
+            <a class="button" href="https://github.com/dhrubasuz/FigureRelay" target="_blank" rel="noopener noreferrer">Explore the public repository <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/dhrubasuz/FigureRelay/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer">Read the architecture <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <dl class="case-meta">
+          <div><dt>Project</dt><dd>Personal software prototype</dd></div>
+          <div><dt>Scope</dt><dd>Local, single-user reporting workspace</dd></div>
+          <div><dt>Implementation</dt><dd>React / TypeScript · FastAPI / Python · SQLite</dd></div>
+          <div><dt>Source</dt><dd>Public · Apache-2.0 original code</dd></div>
+        </dl>
+      </div>
+    </section>
+    <div class="wrap">
+      <div class="case-art">
+        <figure class="project-screenshot">
+          <a href="../assets/figurerelay-review.png" target="_blank" rel="noopener noreferrer" aria-label="Open FigureRelay interface screenshot in a new tab">
+            <img src="../assets/figurerelay-review.png" alt="FigureRelay review interface showing source version, editable workspace revision, published snapshot and a frozen candidate. All reporting figures are sample data." width="1265" height="712" loading="lazy">
+          </a>
+          <figcaption><span>Actual prototype interface · Sample reporting data</span><span>Open image to inspect the detail ↗</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="wrap case-body">
+      <aside class="case-index" aria-label="Case study contents">
+        <h2>Inside the project</h2>
+        <ol><li><a href="#problem">01 · The problem</a></li><li><a href="#design">02 · Design decisions</a></li><li><a href="#validation">03 · Review and validation</a></li><li><a href="#scope">04 · Status and boundaries</a></li></ol>
+      </aside>
+      <div class="case-content">
+        <section id="problem">
+          <h2>Repeated figures create a consistency problem.</h2>
+          <p>A figure can appear in a report, a slide deck and several sections within each. Updating one occurrence does not establish that the others still agree. The useful problem is therefore more specific than generating documents: connect each occurrence to a stable source key and make the review state visible.</p>
+          <p>I developed FigureRelay as a local prototype to explore that workflow. The project brings together source import, linked occurrences, document generation and approval into a single reviewable sequence.</p>
+        </section>
+        <section id="design">
+          <h2>Make the relationship explicit.</h2>
+          <h3>Stable keys rather than repeated manual entry</h3>
+          <p>CSV data or an XLSX <code>Metrics</code> sheet supplies named values. Built-in templates use placeholders such as <code>{{metric.key}}</code>, allowing the same source figure to appear consistently in both a report and a presentation.</p>
+          <h3>Approve an exact candidate</h3>
+          <p>A generated candidate holds its revision, document bytes and manifest. Approval refers to that candidate, and export returns those approved files. This separates an editable working state from the particular result a person reviewed.</p>
+          <h3>Keep the prototype understandable</h3>
+          <p>A React and TypeScript interface talks to a Python FastAPI service. SQLite stores project state and local event records. The architecture keeps the browser interaction, generation logic and persistence responsibilities distinct.</p>
+          <div class="case-flow" role="img" aria-label="Import named figures, generate a frozen candidate, review and approve that exact candidate, then export the approved files.">
+            <div class="flow-node" aria-hidden="true"><b>Named source</b><span>CSV or XLSX</span></div>
+            <div class="flow-node" aria-hidden="true"><b>Frozen candidate</b><span>Figures + revision</span></div>
+            <div class="flow-node" aria-hidden="true"><b>Explicit approval</b><span>Review that candidate</span></div>
+            <div class="flow-node" aria-hidden="true"><b>Approved export</b><span>DOCX + PPTX + manifest</span></div>
+          </div>
+          <ul class="tags" aria-label="Project technologies"><li>React</li><li>TypeScript</li><li>FastAPI</li><li>Python</li><li>SQLite</li><li>CSV / XLSX</li><li>DOCX / PPTX</li></ul>
+        </section>
+        <section id="validation">
+          <h2>Review the source, the candidate and the exported result.</h2>
+          <p>The repository includes automated tests and documented checks for import, generation, approval and export. The important checks concern behaviour: missing or unsuitable source values, the revision attached to an approval, and the files returned from an export.</p>
+          <p>Excel formulas are a deliberate boundary. The importer reads available cached results; it does not run Excel’s calculation engine. A missing cached result blocks the import rather than silently inventing a value.</p>
+          <p>Document previews help inspect figures and occurrences. They do not certify Microsoft Word or PowerPoint layout, and the occurrence change list is not a general prose comparison.</p>
+          <a class="evidence-link" href="https://github.com/dhrubasuz/FigureRelay#readme" target="_blank" rel="noopener noreferrer">Inspect setup instructions, tests and documented limitations <span aria-hidden="true">↗</span></a>
+        </section>
+        <section id="scope">
+          <h2>A working local prototype with a defined boundary.</h2>
+          <p>FigureRelay is a personal, single-user application intended to run locally. It does not provide organisation accounts, independent approver identities, live external-system connectors or a production security and governance model.</p>
+          <p>Local event records make the prototype’s workflow inspectable, but the database remains locally writable; this is not a tamper-proof audit system. Built-in templates demonstrate the approach rather than support arbitrary Office document layouts.</p>
+          <p>The public repository contains the implementation, architecture notes and run instructions. Original code is licensed under Apache-2.0; third-party components retain their own terms.</p>
+        </section>
+      </div>
+    </div>
+    <section class="next-case">
+      <div class="wrap next-case-inner"><div><span>Next case study</span><h2>From source data to a useful decision.</h2></div><a class="text-link" href="data-workbench.html">Data Workbench <span aria-hidden="true">→</span></a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#work">Back to selected work <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
