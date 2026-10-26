@@ -12,7 +12,7 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and open the homepage, all three case studies and `/lab/`.
+- Serve `dist/` and open the homepage, all case studies and `/lab/`.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.
@@ -58,6 +58,14 @@ Office content and metadata checks are distinct from opening Word and PowerPoint
 Use the [public browser site](https://arcade.suzata.com.np) for the portfolio link. Before describing a particular game or feature as verified, check that game and feature on the current public version. Check instructions, input controls, pause/reset behaviour, responsive layout and the stated score-storage behaviour where applicable.
 
 Do not infer a Play Store/App Store release, a completed test count or access to private source from a working public website. Keep private source private unless a separate, reviewed public version is deliberately prepared.
+
+## Fuzion and MRR Free Tools evidence
+
+These case studies link to public experiences while retaining private source and operational records. Fuzion’s live public homepage is distinct from acceptance of signed-in learner/instructor operations, actual message receipt and timed behaviour. MRR’s supported local-file processing does not establish zero network use or universal format compatibility. Use synthetic files and inspect actual exports before reporting a current workflow as verified. Retain third-party notices and do not publish account, learner, staff or deployment details.
+
+## AlloyPDF and Helpdesk Air evidence
+
+Both pages are source-backed development case studies, with original conceptual diagrams instead of private interfaces. AlloyPDF remains an internal development build: browser-local tools and private Office/signing/writing services have distinct availability, and native source foundations are not signed app releases. Credit the established processing engines and preserve their licences. Helpdesk Air remains a controlled FastAPI/PostgreSQL test environment; its separate Zammad package retains upstream/AGPL provenance. Do not show hosted records or infer production rollout, live external channels, synthetic-only hosted data or measured operational impact.
 
 ## Before publishing a repository
 
