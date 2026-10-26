@@ -1,0 +1,90 @@
+{
+  "author": "Dhruba Poudel",
+  "last_modified_by": "Dhruba Poudel",
+  "date": "2026-10-26",
+  "application": "Data Workbench",
+  "status": "Local implementation; awaiting parent browser and publication verification",
+  "stack": [
+    "HTML",
+    "CSS",
+    "Vanilla JavaScript ES modules"
+  ],
+  "scope": "Original synthetic demonstration. No personal/employer performance claim.",
+  "tests": {
+    "runner": "Node built-in test",
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "command": "node --test dist/lab/data/core.test.mjs"
+  },
+  "static_checks": {
+    "syntax": "passed",
+    "html_ids": 70,
+    "duplicate_ids": 0,
+    "missing_dom_ids": 0,
+    "missing_local_asset_references": 0,
+    "forbidden_network_storage_html_eval_apis_found": 0,
+    "standalone_fixture_matches_module": true,
+    "author_meta": "Dhruba Poudel"
+  },
+  "snapshot": "2026-10-26",
+  "limits": {
+    "bytes": 1048576,
+    "rows": 2000,
+    "columns": 40,
+    "fieldLength": 10000
+  },
+  "sample_reconciliation": {
+    "source": 50,
+    "accepted": 42,
+    "rejected": 8,
+    "issues": 8
+  },
+  "sample_metrics": {
+    "total": 42,
+    "statuses": {
+      "Open": 8,
+      "In progress": 17,
+      "Resolved": 17
+    },
+    "ageing": {
+      "0–2 days": 3,
+      "3–7 days": 3,
+      "8–14 days": 5,
+      "15+ days": 14
+    },
+    "backlog": 25,
+    "overdue": 19,
+    "priorityOverdue": 11,
+    "oldestDays": 36,
+    "effortMinutes": 1560,
+    "resolved": 17,
+    "resolvedOnTime": 11
+  },
+  "meaningful_edge_cases": [
+    "Quoted commas, doubled quotes, multiline fields, BOM, CRLF/LF",
+    "Missing/duplicate/empty headers and column-count mismatch",
+    "Malformed quotes, invalid UTF-8 in UI, binary controls and bounded inputs",
+    "All duplicate ID occurrences held",
+    "Calendar rollover, leap day, date-order and resolution rules",
+    "Zero and negative/decimal/exponent/out-of-bound effort",
+    "Exactly 2000 accepted data rows; 2001 fails without truncation",
+    "Inclusive filter dates and due-today overdue boundary",
+    "Backlog age/status reconciliation, empty metrics, deterministic sort",
+    "Formula-neutralised exports and HTML text-node rendering"
+  ],
+  "limitations": [
+    "No browser interaction or screenshot taken by component author; parent owns IAB QA.",
+    "No public URL or deployment claimed in this record.",
+    "Fixed historical snapshot; not a live service dashboard.",
+    "Schema checks do not prove business truth or immutability.",
+    "Generated CSV prefixing changes formula-like text intentionally."
+  ],
+  "privacy": {
+    "file_content_upload": false,
+    "api": false,
+    "cookies_used": false,
+    "persistent_browser_storage": false,
+    "data": "Fictional supplied fixture; visitor files processed in current tab memory only"
+  }
+}

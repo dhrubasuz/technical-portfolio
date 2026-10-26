@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="An original browser-local demonstration by Dhruba Poudel: validate a CSV, reconcile exceptions and explore a fictional service-operations dashboard.">
+  <meta name="theme-color" content="#102B3D">
+  <title>Data Workbench — Dhruba Poudel</title>
+  <link rel="stylesheet" href="./workbench.css?v=20261026">
+  <script type="module" src="./workbench.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workbench</a>
+  <header class="site-header">
+    <a class="back-link" href="../index.html#work"><span aria-hidden="true">↖</span> Dhruba Poudel <span class="back-label">/ selected work</span></a>
+    <span class="header-note"><span class="status-dot" aria-hidden="true"></span> Interactive demonstration</span>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">A small tool for better decisions</p>
+        <h1 id="page-title">Data, ready for<br><em>the next step.</em></h1>
+        <p class="hero-copy">Validate a CSV. Isolate exceptions. Explore the operational picture.<br class="wide-only"> One transparent workflow, from source rows to useful signals.</p>
+      </div>
+      <aside class="hero-aside" aria-label="Demonstration details">
+        <p class="mini-label">DATA WORKBENCH <span class="edition">01</span></p>
+        <dl>
+          <div><dt>Built by</dt><dd>Dhruba Poudel</dd></div>
+          <div><dt>Data</dt><dd>Entirely fictional</dd></div>
+          <div><dt>Processing</dt><dd>In your browser</dd></div>
+        </dl>
+        <p>Vanilla JavaScript · original demonstration<br>No accounts, cookies or data uploads.</p>
+      </aside>
+    </section>
+
+    <section id="workspace" class="workspace" aria-label="Data Workbench">
+      <div class="workspace-top">
+        <div class="workspace-brand"><span class="brand-symbol" aria-hidden="true">▤</span><span>Data Workbench<small>Validate → understand → act</small></span></div>
+        <div class="snapshot"><span class="mini-label">Fixed reporting snapshot</span><strong>26 October 2026</strong></div>
+      </div>
+      <div class="workspace-nav">
+        <div role="tablist" aria-label="Workbench views" class="tab-list">
+          <button type="button" id="quality-tab" role="tab" aria-selected="true" aria-controls="quality-panel" tabindex="0"><span class="tab-number">01</span> Data quality <span id="quality-badge" class="tab-badge">—</span></button>
+          <button type="button" id="operations-tab" role="tab" aria-selected="false" aria-controls="operations-panel" tabindex="-1"><span class="tab-number">02</span> Operations <span id="operations-badge" class="tab-badge">—</span></button>
+        </div>
+        <span class="local-label"><span aria-hidden="true">◉</span> Local processing</span>
+      </div>
+
+      <div id="loading-state" class="loading-state" hidden role="status"><span class="spinner" aria-hidden="true"></span><span>Checking rows and reconciling the result…</span></div>
+      <div id="error-banner" class="error-banner" role="alert" hidden><strong>The file could not be processed.</strong><p id="error-message"></p><span>Your previous validated dataset is still active.</span></div>
+      <p id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></p>
+
+      <section id="quality-panel" role="tabpanel" aria-labelledby="quality-tab" class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / Protect the input</p><h2>A clear result for every row.</h2><p>Start with the fictional sample, or check a CSV of your own. Only accepted rows enter the operations view.</p></div>
+          <button type="button" class="button button-light" id="download-sample"><span aria-hidden="true">↓</span> Download sample</button>
+        </div>
+        <div class="quality-layout">
+          <div class="upload-card">
+            <span class="file-icon" aria-hidden="true">CSV</span>
+            <h3>Check a dataset</h3>
+            <p>Choose a UTF-8 CSV. It stays on this device and is cleared when you leave or reload.</p>
+            <label class="upload-label" for="csv-file"><span aria-hidden="true">↑</span> Choose CSV file</label>
+            <input type="file" id="csv-file" accept=".csv,text/csv" aria-describedby="upload-help">
+            <p id="upload-help" class="small">Up to 1 MB · 2,000 data rows · 40 columns</p>
+            <button type="button" id="load-sample" class="text-button">Restore fictional sample <span aria-hidden="true">↺</span></button>
+            <details class="schema-details"><summary>View the expected schema</summary><p>Use these nine headers. Dates are YYYY-MM-DD; effort is a non-negative whole number of minutes.</p><code>id, title, status, priority, channel, opened_at, due_at, resolved_at, effort_minutes</code><dl><div><dt>Status</dt><dd>Open, In progress, Resolved</dd></div><div><dt>Priority</dt><dd>Low, Medium, High, Urgent</dd></div><div><dt>Channel</dt><dd>Email, Portal, Phone, Chat</dd></div></dl><p>Resolved tickets require a resolution date; other tickets leave it blank. The snapshot date is 26 October 2026. Future opened or resolved dates are rejected.</p></details>
+          </div>
+
+          <div class="run-area">
+            <div class="run-heading"><div><span class="mini-label">Latest completed check</span><h3 id="dataset-name">Loading fictional sample</h3></div><span class="pill" id="run-state">Ready</span></div>
+            <p class="run-note" id="run-note">Original, deterministic fictional data.</p>
+            <div class="quality-stats">
+              <div><span class="stat-label">Source records</span><strong id="source-count">—</strong><span>Non-blank data rows</span></div>
+              <div class="accepted-stat"><span class="stat-label">Accepted</span><strong id="accepted-count">—</strong><span>Ready for exploration</span></div>
+              <div class="rejected-stat"><span class="stat-label">Held for review</span><strong id="rejected-count">—</strong><span>Excluded from reporting</span></div>
+            </div>
+            <div class="reconciliation" id="reconciliation"><span class="check-mark" aria-hidden="true">✓</span><span id="reconciliation-text">Checking reconciliation…</span></div>
+            <div class="rule-strip"><span><i aria-hidden="true">✓</i> Required fields</span><span><i aria-hidden="true">✓</i> Unique IDs</span><span><i aria-hidden="true">✓</i> Valid dates</span><span><i aria-hidden="true">✓</i> Allowed values</span><span><i aria-hidden="true">✓</i> Non-negative effort</span></div>
+            <div class="export-actions"><button type="button" class="button button-primary" id="download-clean">↓ Accepted rows</button><button type="button" class="button button-outline" id="download-exceptions">↓ Exceptions report</button><button type="button" class="text-button" id="explore-data">Explore accepted rows <span aria-hidden="true">→</span></button></div>
+            <p class="small export-note">Exports quote every cell and prefix formula-like text for spreadsheet safety. CSV remains data; review it before importing elsewhere.</p>
+          </div>
+        </div>
+
+        <div class="exceptions-section">
+          <div class="table-heading"><div><h3>Exception review</h3><p id="exceptions-description">Every held record includes its source line and reason.</p></div><span class="small" id="exception-total"></span></div>
+          <div id="no-exceptions" class="empty-state" hidden><span aria-hidden="true">✓</span><h4>No exceptions found</h4><p>Every source record passed the rules for this schema and snapshot.</p></div>
+          <div class="table-scroll" id="exceptions-table-wrap" tabindex="0" role="region" aria-label="Scrollable exceptions table">
+            <table class="exceptions-table"><caption class="sr-only">Rejected source records and validation reasons</caption><thead><tr><th scope="col">Source</th><th scope="col">Record ID</th><th scope="col">Title / context</th><th scope="col">Reason for review</th></tr></thead><tbody id="exceptions-body"></tbody></table>
+          </div>
+          <p class="small table-footnote" id="exception-pagination"></p>
+        </div>
+        <details class="method-note"><summary>What this check does — and its limits</summary><div class="method-columns"><p>The parser handles quoted commas, escaped quotes, multiline fields, UTF-8 BOM and CRLF/LF line endings. Headers are trimmed and case-normalised. Unexpected extra columns are disclosed and excluded from accepted exports.</p><p>All instances of a duplicate ID are held; no record is silently chosen as correct. Blank lines are ignored and counted. A failed file does not replace the previous successful run. This is a schema check, not proof of business accuracy or an immutable audit trail.</p></div></details>
+      </section>
+
+      <section id="operations-panel" role="tabpanel" aria-labelledby="operations-tab" class="panel" hidden tabindex="0">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / Understand the queue</p><h2>Turn a clean dataset into a decision.</h2><p>Filter accepted tickets, inspect the backlog and follow a signal to the underlying records.</p></div>
+          <button type="button" class="button button-light" id="export-view">↓ Export this view</button>
+        </div>
+        <div class="data-context"><span class="status-dot" aria-hidden="true"></span><span id="operations-context">Fictional sample · accepted rows only</span><span>Snapshot: 26 Oct 2026 · UTC dates</span></div>
+        <form id="filters" class="filters" aria-label="Filter service tickets">
+          <div><label for="date-from">Opened from</label><input type="date" id="date-from" min="1900-01-01" max="2026-10-26"></div>
+          <div><label for="date-to">Opened to</label><input type="date" id="date-to" min="1900-01-01" max="2026-10-26"></div>
+          <div><label for="channel-filter">Channel</label><select id="channel-filter"><option value="">All channels</option><option>Email</option><option>Portal</option><option>Phone</option><option>Chat</option></select></div>
+          <div><label for="priority-filter">Priority</label><select id="priority-filter"><option value="">All priorities</option><option>Low</option><option>Medium</option><option>High</option><option>Urgent</option></select></div>
+          <div class="search-field"><label for="search">Find a ticket</label><input type="search" id="search" placeholder="ID, title or keyword" maxlength="160" autocomplete="off"></div>
+          <button type="reset" class="reset-button">Reset filters ↺</button>
+          <p id="filter-error" class="filter-error" role="alert" hidden></p>
+        </form>
+
+        <div class="operations-stats" id="operations-stats">
+          <button type="button" class="metric-card active" data-drill="" aria-pressed="true"><span>All tickets</span><strong id="metric-total">—</strong><small>Matching current filters <span aria-hidden="true">↗</span></small></button>
+          <button type="button" class="metric-card" data-drill="backlog" aria-pressed="false"><span>Unresolved backlog</span><strong id="metric-backlog">—</strong><small>Open + in progress <span aria-hidden="true">↗</span></small></button>
+          <button type="button" class="metric-card overdue-card" data-drill="overdue" aria-pressed="false"><span>Overdue</span><strong id="metric-overdue">—</strong><small>Unresolved; due before snapshot <span aria-hidden="true">↗</span></small></button>
+          <button type="button" class="metric-card" data-drill="Resolved" aria-pressed="false"><span>Resolved</span><strong id="metric-resolved">—</strong><small>Closed by snapshot <span aria-hidden="true">↗</span></small></button>
+        </div>
+
+        <div class="insight" role="status"><span class="insight-symbol" aria-hidden="true">↗</span><div><span class="mini-label">A signal from this view</span><p id="decision-insight"></p></div><button type="button" id="review-overdue" class="text-button">Review overdue <span aria-hidden="true">→</span></button></div>
+
+        <div id="operations-empty" class="empty-state" hidden><span aria-hidden="true">⌕</span><h3>No tickets in this view</h3><p>Try a wider date range, a different channel or a shorter search.</p><button type="button" id="empty-reset" class="button button-outline">Clear filters</button></div>
+        <div class="charts" id="charts">
+          <section class="chart-card" aria-labelledby="ageing-title">
+            <div class="chart-heading"><div><p class="mini-label">Unresolved tickets</p><h3 id="ageing-title">Backlog ageing</h3></div><span class="chart-unit">Calendar days</span></div>
+            <div id="ageing-chart" class="ageing-chart" role="group" aria-label="Backlog by ticket age"></div>
+            <p class="small">Age = snapshot date − opened date. Select a bar to inspect that group.</p>
+          </section>
+          <section class="chart-card" aria-labelledby="status-title">
+            <div class="chart-heading"><div><p class="mini-label">All matching tickets</p><h3 id="status-title">Status mix</h3></div><span class="chart-unit" id="status-total"></span></div>
+            <div id="status-chart" class="status-chart" role="group" aria-label="Ticket counts by status"></div>
+            <p class="small">Counts describe this fictional dataset. They are not personal performance results.</p>
+          </section>
+        </div>
+
+        <div class="ticket-section">
+          <div class="table-heading"><div><h3 id="ticket-table-title">Ticket register</h3><p id="ticket-table-description">Select any row to inspect the record.</p></div><button type="button" id="clear-drill" class="text-button" hidden>Clear drilldown ×</button></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable service ticket register">
+            <table class="ticket-table"><caption class="sr-only">Accepted tickets matching filters; open details with each ticket ID</caption><thead><tr><th scope="col">Ticket / title</th><th scope="col">Status</th><th scope="col">Priority</th><th scope="col">Channel</th><th scope="col">Opened</th><th scope="col">Due</th><th scope="col">Age</th></tr></thead><tbody id="tickets-body"></tbody></table>
+          </div>
+          <div class="pagination"><span id="table-count" class="small"></span><div><button type="button" class="page-button" id="previous-page" aria-label="Previous page">←</button><span id="page-number" class="small"></span><button type="button" class="page-button" id="next-page" aria-label="Next page">→</button></div></div>
+        </div>
+        <details class="method-note"><summary>Metric definitions & reporting boundaries</summary><div class="method-columns"><p>Filters use the ticket’s opened date, including both endpoints. Backlog means Open or In progress. Overdue means unresolved with a due date before 26 October 2026; a ticket due on the snapshot date is not overdue. Ageing includes unresolved tickets only.</p><p>Summary cards and charts share the main filters. Selecting a card, status or age group narrows the register and its export; the summary remains a view of the base filters. Effort is input data, not elapsed time or a measured saving. No SLA, productivity or personal-impact claim is made.</p></div></details>
+      </section>
+      <div class="workspace-bottom"><span><span class="status-dot" aria-hidden="true"></span> Your data stays in this tab.</span><span>Refresh to return to the fictional sample.</span></div>
+    </section>
+
+    <section class="closing-note"><div><p class="eyebrow">Why I built this</p><h2>Useful automation needs<br>visible checks.</h2></div><div><p>This original demonstration connects two parts of business systems work: making inputs dependable, then making the result understandable.</p><p>It uses a bounded schema, explicit exception handling, reconciliation and traceable calculations. The demo is built with HTML, CSS and vanilla JavaScript; its data and outcomes are fictional.</p><a href="../index.html#work" class="text-link">Back to selected work <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><span>Designed & developed by Dhruba Poudel</span><span>Original demonstration · synthetic data</span></footer>
+  <dialog id="ticket-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><p class="eyebrow">Record detail</p><button type="button" id="close-dialog" class="icon-button" aria-label="Close ticket details">×</button></div><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl id="dialog-fields"></dl><p class="small">Accepted source record · all data is fictional in the sample.</p></dialog>
+  <noscript><div class="noscript">This interactive workbench needs JavaScript to validate files and calculate results. No data is sent to a server.</div></noscript>
+</body>
+</html>
+
