@@ -2,7 +2,7 @@
 
 Practical work across software development, automation, data analysis and IT operations.
 
-This repository contains a buildless portfolio website, eleven selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
+This repository contains a buildless portfolio website, twelve selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
 
 ## Live portfolio
 
@@ -10,10 +10,13 @@ This repository contains a buildless portfolio website, eleven selected projects
 
 [Try Exception Studio Team Edition](https://studio.dhrub.com.np/) · [Public GitHub code](https://github.com/dhrubasuz/exception-studio) · [Live verification](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md), **28 October 2026**. The [Classic CSV workbench](https://studio.dhrub.com.np/classic) remains available.
 
+[Open RouteLab](https://about.dhrub.com.np/route-lab/) · [Public RouteLab code](https://github.com/dhrubasuz/route-lab) · [Technical case study](dist/cases/route-lab.html). The browser-local network simulator is maintained in a separate repository.
+
 ## Explore the work
 
 | Project | Purpose | Scope |
 | --- | --- | --- |
+| [RouteLab](dist/cases/route-lab.html) | Diagnose a fictional network through packet tracing, configuration changes and a reproducible request/response result. | Separate React/TypeScript application with original SVG topology, IPv4 routing, stateless firewall rules and bounded TTL. Educational simulation; no real network probes. |
 | [FigureRelay](https://github.com/dhrubasuz/FigureRelay) | Keep linked figures consistent across reports and presentations, then review and export an exact revision. | Separate local Python/FastAPI, SQLite and React/TypeScript prototype; Apache-2.0. |
 | [Exception Studio Team Edition](dist/cases/exception-studio.html) | Recover failed integrations through durable jobs, analyst review, separate approval and receipt evidence. | Live React/TypeScript, Node 24 and SQLite lab; fictional accounts/data, 24-hour workspaces, 110 automated tests and seven live scenarios verified 28 October 2026. Classic CSV review retained. |
 | [DataWorkbench](dist/lab/index.html) | Inspect a fictional service-operations dataset, validate CSV rows, explore metrics and review exceptions. | HTML/CSS/JavaScript demonstration; data processing stays in browser memory. |
@@ -47,6 +50,16 @@ python -m http.server 8000 --bind 127.0.0.1 --directory dist
 Open `http://127.0.0.1:8000/` for the portfolio, `/lab/` for DataWorkbench and `/ai-lab/` for Triage Lab. Stop the server with Ctrl+C. A static host can publish the same `dist/` directory; no backend service is required for these pages.
 
 FigureRelay and Exception Studio are separate applications. Follow [FigureRelay's instructions](https://github.com/dhrubasuz/FigureRelay) or [Exception Studio's instructions](https://github.com/dhrubasuz/exception-studio) rather than expecting their services to run inside this static site.
+
+## RouteLab engineering
+
+[RouteLab](https://github.com/dhrubasuz/route-lab) connects an original visual interface to a deterministic TypeScript network model. The static portfolio links to its [case study](dist/cases/route-lab.html) and [published application](https://about.dhrub.com.np/route-lab/); the application's source and compiled bundles are maintained separately from this repository.
+
+The engine selects connected/static routes by longest prefix, lower metric and stable route ID. A selected next hop must be an actual adjacent point-to-point interface, with mutual subnet membership and an available link. Transit routers decrement TTL; endpoint devices cannot forward a packet that loops back to them. The firewall applies the first matching enabled rule in priority/ID order, with implicit deny. A successful result requires both the service-bound request and an independently evaluated response path.
+
+Eight supplied scenarios cover a clean round trip, an earlier blocking rule, a missing route, a subnet mismatch, a disabled link, a routing loop, a missing return route and a disabled service. Focused repairs change the intended fault while preserving unrelated edits. Topology imports are structurally validated and bounded; export files retain the configuration and computed diagnostic evidence.
+
+The fixtures are fictional. Transit time is the sum of configured link costs, not observed network performance. This educational IPv4 model does not implement DNS, NAT, ARP, TCP handshakes, TLS, dynamic routing, packet capture or a complete vendor/cloud networking stack. It makes no real probes or business-impact claim. Runtime tests, published-browser checks and release provenance belong to the RouteLab repository's verification record, not an assumed quality score.
 
 ## Exception Studio evidence
 

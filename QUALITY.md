@@ -12,13 +12,23 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and follow all eleven selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
+- Serve `dist/` and follow all twelve selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.
 - Inspect the browser console and network failures. Test the published URL as well as the local files before reporting it as live.
 
 These checks require browser inspection. A successful data test command does not establish that the portfolio pages work correctly.
+
+## RouteLab checks
+
+RouteLab is a separate [React/TypeScript network simulator](https://github.com/dhrubasuz/route-lab), presented through a [portfolio case study](dist/cases/route-lab.html). Its public application is deployed under a scoped `/route-lab/` directory, while the source, build and application tests are maintained in its own repository. Do not infer application verification from this portfolio's static checks.
+
+For a RouteLab release, retain the exact source revision, application build, test result and published URL. Its engine checks should establish unsigned IPv4/CIDR boundaries; prefix/metric/ID route selection; actual next-hop adjacency; mutual subnet membership; disabled links and devices; forwarding-only devices; first-match stateless firewall rules; independent response evaluation; TTL-bounded loops, including a revisit to the original source; immutable inputs; focused repair; and bounded, malformed or hostile JSON rejection.
+
+In the actual browser, complete all eight supplied scenarios, inspect the selected rule/route and failing phase, make a manual configuration change, apply the focused repair, and rerun. Export and reimport a supported topology, inspect the diagnostic export, and confirm that changing configuration invalidates an earlier displayed result. Check packet playback, keyboard operation, mobile layout, reduced-motion behaviour, clear error states and external project links.
+
+Use original screenshots of the actual interface. Label all data fictional and all transit costs modelled. Do not present a successful simulated packet as evidence of a reachable real service, actual packet capture, TLS success, full router/firewall emulation, production security or measured business savings. Keep the supported model and omissions explicit.
 
 ## Exception Studio evidence
 
