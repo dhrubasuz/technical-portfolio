@@ -12,13 +12,21 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and follow all twelve selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
+- Serve `dist/` and follow all thirteen selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.
 - Inspect the browser console and network failures. Test the published URL as well as the local files before reporting it as live.
 
 These checks require browser inspection. A successful data test command does not establish that the portfolio pages work correctly.
+
+## Trust Boundary Lab publication checks
+
+The [technical article](dist/articles/payment-workflow-security.html) and [original Node.js lab](https://github.com/dhrubasuz/trust-boundary-lab) belong to a separate teaching-code release. Its documented regression suite contains **41 passing tests**. Keep that result attached to the lab source hashes and verification record; do not add it to this portfolio's existing data/model test count.
+
+Before publication, run the lab's documented test and demonstration commands against the bundled source. Confirm the article, public repository and downloaded ZIP refer to the same reviewed implementation. Inspect the article's original code blocks, explanatory cover, attribution and links on desktop and narrow layouts. The project cover is an original explanatory diagram, not an application screenshot.
+
+Preserve the distinction between the verified 2018 Facebook acknowledgement and this independently designed fictional model. State that the code uses an in-memory synchronous store, a simulated worker and standalone DOM/CSRF examples. Neither promise-scheduled tests nor the article establish distributed transactions, real browser exploit validation, a deployed authentication pipeline, payment processing or historical exploit details. Retain actual publication and CI evidence separately from local checks.
 
 ## RouteLab checks
 

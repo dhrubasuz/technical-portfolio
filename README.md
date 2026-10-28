@@ -2,7 +2,7 @@
 
 Practical work across software development, automation, data analysis and IT operations.
 
-This repository contains a buildless portfolio website, twelve selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
+This repository contains a buildless portfolio website, thirteen selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
 
 ## Live portfolio
 
@@ -12,10 +12,13 @@ This repository contains a buildless portfolio website, twelve selected projects
 
 [Open RouteLab](https://about.dhrub.com.np/route-lab/) · [Public RouteLab code](https://github.com/dhrubasuz/route-lab) · [Technical case study](dist/cases/route-lab.html). The browser-local network simulator is maintained in a separate repository.
 
+[Read Trust Boundary Lab](https://about.dhrub.com.np/articles/payment-workflow-security.html) · [Public security-lab code](https://github.com/dhrubasuz/trust-boundary-lab) · [Download the original lab](https://about.dhrub.com.np/downloads/trust-boundary-lab.zip). The article and fictional model connect campaign-policy checks to inspectable regression evidence.
+
 ## Explore the work
 
 | Project | Purpose | Scope |
 | --- | --- | --- |
+| [Trust Boundary Lab](dist/articles/payment-workflow-security.html) | Explain a fictional campaign command through account authorization, trusted billing eligibility, idempotent intent and simulated delivery revalidation. | Original dependency-free Node.js teaching model and technical article; 41 passing tests. In-memory and synchronous, with no ads, payments or external service. |
 | [RouteLab](dist/cases/route-lab.html) | Diagnose a fictional network through packet tracing, configuration changes and a reproducible request/response result. | Separate React/TypeScript application with original SVG topology, IPv4 routing, stateless firewall rules and bounded TTL. Educational simulation; no real network probes. |
 | [FigureRelay](https://github.com/dhrubasuz/FigureRelay) | Keep linked figures consistent across reports and presentations, then review and export an exact revision. | Separate local Python/FastAPI, SQLite and React/TypeScript prototype; Apache-2.0. |
 | [Exception Studio Team Edition](dist/cases/exception-studio.html) | Recover failed integrations through durable jobs, analyst review, separate approval and receipt evidence. | Live React/TypeScript, Node 24 and SQLite lab; fictional accounts/data, 24-hour workspaces, 110 automated tests and seven live scenarios verified 28 October 2026. Classic CSV review retained. |
@@ -50,6 +53,14 @@ python -m http.server 8000 --bind 127.0.0.1 --directory dist
 Open `http://127.0.0.1:8000/` for the portfolio, `/lab/` for DataWorkbench and `/ai-lab/` for Triage Lab. Stop the server with Ctrl+C. A static host can publish the same `dist/` directory; no backend service is required for these pages.
 
 FigureRelay and Exception Studio are separate applications. Follow [FigureRelay's instructions](https://github.com/dhrubasuz/FigureRelay) or [Exception Studio's instructions](https://github.com/dhrubasuz/exception-studio) rather than expecting their services to run inside this static site.
+
+## Trust Boundary Lab evidence
+
+[Trust Boundary Lab](https://github.com/dhrubasuz/trust-boundary-lab) is my original fictional application-security model, presented through a [technical article](dist/articles/payment-workflow-security.html), public source and a [downloadable bundle](https://about.dhrub.com.np/downloads/trust-boundary-lab.zip). The lab has **41 passing regression tests** and runs with Node.js 22 or newer without dependencies.
+
+The tested boundaries cover account authorization and campaign ownership, server-owned billing eligibility, integer-cent budget/currency policy, request-bound idempotent receipts, an in-memory outbox and current-policy revalidation before simulated delivery. Separate focused examples cover safe text rendering and a session-bound CSRF helper.
+
+This independently designed teaching code does not reconstruct a historical Facebook finding. The store is synchronous and in memory; promise-scheduled replay tests do not establish multi-process or crash-safe correctness. The outbox is a conceptual commit boundary rather than a durable production queue. The DOM example uses a fake element and harmless markup marker; the CSRF helper has no integrated HTTP/authentication pipeline. No real campaign, payment, external effect, historical endpoint, severity, bounty amount or measured customer result is claimed.
 
 ## RouteLab engineering
 
