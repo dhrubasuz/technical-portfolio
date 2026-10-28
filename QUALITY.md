@@ -22,51 +22,37 @@ These checks require browser inspection. A successful data test command does not
 
 ## Exception Studio evidence
 
-Exception Studio is a separate [React/TypeScript, Node 24 and SQLite application](https://github.com/dhrubasuz/exception-studio), linked from the static portfolio through its [case study](dist/cases/exception-studio.html). The portfolio does not embed its database or backend service.
+Exception Studio is a separate [React/TypeScript, Node 24 and SQLite application](https://github.com/dhrubasuz/exception-studio), linked through its [case study](dist/cases/exception-studio.html). Its database and service are not bundled into the static portfolio.
 
-**Fresh automated evidence, 27 October 2026: 48 checks passed — 35 backend/domain/HTTP checks and 13 UI checks.** Run the following from the Exception Studio checkout, with Node 24 and pnpm 11.25.0:
+**Team Edition runtime evidence, 28 October 2026: 110 tests passed — 81 domain/store/HTTP/transport tests and 29 UI tests.** The [public verification record](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md) identifies the tested runtime commit, successful CI run and all seven exported live traces. Tests include Classic Edition as well as the new team workflow.
+
+From the Exception Studio checkout, using the repository-pinned Node and pnpm versions:
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm test
 pnpm typecheck
 pnpm build
+pnpm format:check
+pnpm audit --prod
 ```
 
-The tests assert:
+Automated assertions cover roles and tenant boundaries, command idempotency, stale/concurrent decisions, durable claims and lease fencing, bounded retries and Retry-After, schema repair, outage replay, lost-response receipt deduplication, expiry, restart recovery, full-body deadlines and client recovery. Passing tests are evidence for their asserted boundaries, not a complete accessibility or security audit.
 
-- Source parsing and validation, original source line references, reconciliation, field/date/effort boundaries and spreadsheet-formula neutralisation.
-- Sticky human review: clearing another row's duplicate issue does not silently accept its original exception.
-- Transaction rollback for an invalid correction, including rows, revision, history and retry allocation.
-- Two concurrent HTTP decisions from one expected revision producing exactly one success and one conflict.
-- Exact successful-response replay for a matching idempotency key/body, and rejection of changed content under that key.
-- Frozen CSV and manifest preservation after edits, another import and reopening the same SQLite database.
-- Anonymous sandbox isolation, access expiry, capacity/operation/request limits, cookie/origin checks and static-file boundaries.
-- Client recovery for stale edits, uncertain mutation results and an unreadable new-session response that may already have rotated the cookie.
+**Live HTTPS Team Edition verification, 28 October 2026:**
 
-UI checks run in a simulated DOM. Passing them is separate from actual browser operation, accessibility, HTTPS/proxy behaviour and the hosted workflow.
+- Healthy handoff, rate limit, source timeout, schema drift, duplicate event, upstream outage and lost delivery response all completed through the actual interface.
+- Final totals: seven delivered jobs, seven destination writes, one duplicate, 21 connector attempts and six retries. These are fictional walkthrough observations, not throughput or business-impact metrics.
+- Downloaded source and receipt hashes independently recomputed and matched for all seven traces.
+- Distinct analyst and approver actor IDs were retained. The same visitor controlled both fictional accounts; this is not independent human approval.
+- Desktop and 390 px mobile layouts had no page overflow. Another tab resumed the current account and delivered jobs. Activity expansion exposed older events.
+- The runtime database's public URL returned NOT_FOUND. The retained `/classic` route loaded its 22-row fictional import.
 
-**Public hosted walkthrough verified on 27 October 2026 at https://studio.dhrub.com.np/:**
+Before reporting a future release as verified, rerun the appropriate suite and browser checks against its exact commit and deployment. Keep the publication's source revision distinct from this earlier runtime evidence. Retain no credentials, session tokens, application keys or real business data in screenshots/traces.
 
-- The mixed import returned 22 source rows: 16 accepted and 6 held.
-- Six explicit decisions produced revision 7: 21 accepted, 0 held, 1 excluded and 1,405 accepted minutes.
-- The frozen CSV downloaded as 1,270 bytes. Its SHA-256, `3c0246bac456609b80eafcf1d894e6acbab6c244dd9388a152c8acb9301c5703`, matched the publication manifest.
-- The `__Host-` session cookie had host-only scope, `Secure`, `HttpOnly` and `SameSite=Lax` on HTTPS.
-- The checked browser workflow produced no warning or error.
+The public workspace expires after 24 hours. Jobs execute while the hosted process is running; storage/redeployment may reset state. The bounded SQLite queue is not a distributed broker; trace IDs do not imply an OpenTelemetry installation. Source hashes/history are application guardrails, not tamper-proof audit records. See the application's `SECURITY.md` and architecture notes for the current scope.
 
-These are observations from the completed hosted walkthrough. They do not imply that every automated failure case was also induced on the public runtime, or that an accessibility/security audit has been completed.
-
-For the browser review:
-
-1. Load the mixed fixture: 22 total, 16 accepted, 6 held and 0 excluded. Confirm reasons and original/current values are visible.
-2. Follow the repository's documented walkthrough. Confirm 21 accepted, 0 held, 1 excluded and 1,405 accepted minutes for those exact sample decisions.
-3. Try publishing while rows remain held; confirm the UI and API block it. Then download the completed CSV and manifest and reconcile their counts.
-4. Save a later valid correction. Confirm the current revision advances and the earlier CSV/hash remain unchanged.
-5. Use two tabs sharing one session to create a stale edit. Confirm explicit recovery and preservation of the unsaved form until reload. Independent browser sessions should instead remain isolated.
-6. Confirm the secure host-only cookie, exact hosted origin and API responses on the deployed runtime. Retain response/header evidence without publishing tokens.
-7. Check narrow/desktop layouts, keyboard review, error/status announcements and usable downloads. Save the tested URL, revision, date and limitations.
-
-The public app accepts only bundled fictional fixtures. Notes are stored and must also be fictional. Access expires after 24 hours; the ten-minute/new-session cleanup is not secure erasure, and hosting replacement may reset data. Original-source triggers, hashes and event history are application guardrails, not verified organisational approval or tamper-proof records. Rate limits are in-process and can aggregate visitors behind a reverse proxy. See the application's `SECURITY.md` and architecture notes for the full scope.
+The retained **Classic Edition** video and prior 27 October 2026 CSV verification describe the earlier workbench. Its original result was 21 accepted, no held and one excluded record, with matching frozen CSV/manifest SHA-256. The current Team Edition test count must not be presented as that older release's test count.
 
 ## DataWorkbench checks
 

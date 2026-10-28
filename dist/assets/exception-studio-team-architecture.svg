@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="760" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Exception Studio Team Edition architecture</title>
+  <desc id="desc">Analyst review and separate approver authorisation go through a Node API and SQLite transactions. A leased worker runs fixed HTTP source and destination sandboxes with bounded retries and unique delivery receipts. Dhruba Poudel.</desc>
+  <metadata>Author: Dhruba Poudel; Creator: Dhruba Poudel; Last Modified By: Dhruba Poudel; Date: 2026-10-28</metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#557769"/></marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#173d32}.label{font-size:12px;font-weight:700;letter-spacing:1.4px}.heading{font-size:22px;font-weight:700}.body{font-size:15px;fill:#456057}.small{font-size:13px;fill:#52685f}.rule{stroke:#557769;stroke-width:2;fill:none;marker-end:url(#arrow)}.box{fill:#fff;stroke:#c7d5ca;stroke-width:1.5}</style>
+  </defs>
+  <rect width="1180" height="760" fill="#f3f4ed"/>
+  <text class="label" x="44" y="42">EXCEPTION STUDIO / TEAM EDITION</text>
+  <text x="44" y="83" font-size="32" font-weight="700">Recover the work. Preserve the evidence.</text>
+  <text class="body" x="44" y="113">Server-enforced roles and durable state connect human decisions to connector attempts.</text>
+  <rect class="box" x="44" y="150" width="300" height="145" rx="14"/>
+  <text class="label" x="65" y="181">01 / REACT + TYPESCRIPT</text>
+  <text class="heading" x="65" y="216">Analyst → Approver</text>
+  <text class="body" x="65" y="246">Repair · Explain · Submit · Authorise</text>
+  <text class="small" x="65" y="270">Separate fictional accounts, one visitor</text>
+  <path class="rule" d="M344 222H400"/>
+  <rect class="box" x="410" y="150" width="314" height="145" rx="14"/>
+  <text class="label" x="431" y="181">02 / NODE HTTP API</text>
+  <text class="heading" x="431" y="216">Validate each command</text>
+  <text class="body" x="431" y="246">Session · Role · Revision · Retry key</text>
+  <text class="small" x="431" y="270">Same-origin requests; bounded inputs</text>
+  <path class="rule" d="M724 222H780"/>
+  <rect class="box" x="790" y="150" width="346" height="145" rx="14"/>
+  <text class="label" x="811" y="181">03 / SQLITE TRANSACTIONS</text>
+  <text class="heading" x="811" y="216">Commit state + history</text>
+  <text class="body" x="811" y="246">Jobs · Leases · Attempts · Actor events</text>
+  <text class="small" x="811" y="270">Original source + SHA-256 kept separate</text>
+  <path class="rule" d="M963 295V342H567V375"/>
+  <rect class="box" x="410" y="385" width="314" height="160" rx="14"/>
+  <text class="label" x="431" y="416">04 / BACKGROUND WORKER</text>
+  <text class="heading" x="431" y="451">Claim · Attempt · Recover</text>
+  <text class="body" x="431" y="481">Lease fencing · Bounded backoff</text>
+  <text class="body" x="431" y="505">Deadline · Retry-After · Dead letter</text>
+  <text class="small" x="431" y="527">Runs while the web process is active</text>
+  <path class="rule" d="M410 460H354"/>
+  <rect class="box" x="44" y="385" width="300" height="160" rx="14"/>
+  <text class="label" x="65" y="416">FIXED HTTP SOURCE</text>
+  <text class="heading" x="65" y="451">Induce a real failure</text>
+  <text class="body" x="65" y="481">429 · Timeout · Schema drift · 503</text>
+  <text class="small" x="65" y="511">Fictional routes; no arbitrary targets</text>
+  <path class="rule" d="M724 460H780"/>
+  <rect class="box" x="790" y="385" width="346" height="160" rx="14"/>
+  <text class="label" x="811" y="416">FIXED HTTP DESTINATION</text>
+  <text class="heading" x="811" y="451">Confirm one receipt</text>
+  <text class="body" x="811" y="481">Unique workspace + source event</text>
+  <text class="body" x="811" y="505">Lost reply → retry → existing receipt</text>
+  <text class="small" x="811" y="527">At-least-once attempts; effects deduplicated</text>
+  <rect x="44" y="590" width="1092" height="96" rx="14" fill="#e3ebe0"/>
+  <text class="label" x="65" y="620">INSPECTABLE EVIDENCE</text>
+  <text class="body" x="65" y="649">Actor reasons · Immutable source · Attempt durations · Trace/span IDs · JSON trace downloads</text>
+  <text class="small" x="65" y="673">24-hour fictional workspaces. No enterprise identity, distributed broker or always-on service claim.</text>
+  <text class="small" x="44" y="730">Architecture and implementation: Dhruba Poudel · 28 October 2026</text>
+</svg>

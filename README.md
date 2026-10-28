@@ -8,14 +8,14 @@ This repository contains a buildless portfolio website, eleven selected projects
 
 [Visit the portfolio](https://about.dhrub.com.np) · [Try Data Workbench](https://about.dhrub.com.np/lab/) · [Try Triage Lab](https://about.dhrub.com.np/ai-lab/)
 
-[Try Exception Studio](https://studio.dhrub.com.np/) · Hosted fictional-data workflow verified **27 October 2026**. This is a separate full-stack application; source and local run instructions are in [its repository](https://github.com/dhrubasuz/exception-studio).
+[Try Exception Studio Team Edition](https://studio.dhrub.com.np/) · [Public GitHub code](https://github.com/dhrubasuz/exception-studio) · [Live verification](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md), **28 October 2026**. The [Classic CSV workbench](https://studio.dhrub.com.np/classic) remains available.
 
 ## Explore the work
 
 | Project | Purpose | Scope |
 | --- | --- | --- |
 | [FigureRelay](https://github.com/dhrubasuz/FigureRelay) | Keep linked figures consistent across reports and presentations, then review and export an exact revision. | Separate local Python/FastAPI, SQLite and React/TypeScript prototype; Apache-2.0. |
-| [Exception Studio](dist/cases/exception-studio.html) | Preserve an operational source, resolve exceptions with reasons and freeze a reviewed CSV with a manifest. | Live React/TypeScript, Node 24 and SQLite demonstration; bundled fictional fixtures and anonymous 24-hour sandboxes. Hosted walkthrough verified 27 October 2026. |
+| [Exception Studio Team Edition](dist/cases/exception-studio.html) | Recover failed integrations through durable jobs, analyst review, separate approval and receipt evidence. | Live React/TypeScript, Node 24 and SQLite lab; fictional accounts/data, 24-hour workspaces, 110 automated tests and seven live scenarios verified 28 October 2026. Classic CSV review retained. |
 | [DataWorkbench](dist/lab/index.html) | Inspect a fictional service-operations dataset, validate CSV rows, explore metrics and review exceptions. | HTML/CSS/JavaScript demonstration; data processing stays in browser memory. |
 | [PocketArcade](https://arcade.suzata.com.np) | Explore a browser-game collection with Relaxed/Classic play pace and device-local best scores. | Existing public browser demonstration; its private source is not copied into this repository. |
 | [Fuzion Driving School](https://fuziondrivingschool.com.au/) | Connect a responsive service website to developed booking and learner/instructor workflows. | Live public website; signed-in operational acceptance is separate. Private source. |
@@ -50,13 +50,15 @@ FigureRelay and Exception Studio are separate applications. Follow [FigureRelay'
 
 ## Exception Studio evidence
 
-Exception Studio connects a real same-origin HTTP API to persistent SQLite state. It retains original source values separately from corrections, requires explicit decisions for original exceptions, rejects stale revisions, replays matching idempotent commands, and freezes CSV bytes with reconciliation counts and SHA-256 values.
+**Team Edition**, verified **28 October 2026**, adds durable SQLite jobs, server-enforced analyst/approver roles, bounded retries, schema repair, lease fencing, reasoned replay and duplicate-safe sandbox delivery. The connectors use real HTTP exchanges on fixed fictional routes. Source snapshots remain separate from reviewed payloads; attempts, actor reasons, receipt hashes and JSON traces make recovery inspectable.
 
-On **27 October 2026**, its **48 automated checks passed: 35 domain/store/HTTP checks and 13 UI checks**. They cover concurrent decisions, invalid-correction rollback, exact retry replay, source immutability, frozen downloads after a database reopen, isolation and limits, and client recovery from stale or uncertain responses. UI checks use a simulated DOM; browser and hosted checks are retained as separate evidence, and full accessibility conformance is not claimed.
+The runtime revision passed **110 automated tests: 81 domain/store/HTTP/transport tests and 29 UI tests**, together with formatting, the production build and dependency audit. All **seven live scenarios** were completed through the hosted interface: healthy handoff, rate limit, source timeout, changed schema, duplicate event, upstream outage and a destination commit whose reply was lost. Final totals were **seven delivered jobs and seven destination writes**, with one recognised duplicate. Independently recomputed source and payload hashes matched all seven downloaded traces.
 
-The **public HTTPS walkthrough was verified on 27 October 2026**: import 22 fictional rows, complete six explicit decisions, and publish revision 7 with 21 accepted, 0 held, 1 excluded and 1,405 accepted minutes. The downloaded 1,270-byte CSV's SHA-256 matched its manifest. The host-only `__Host-` cookie had `Secure`, `HttpOnly` and `SameSite=Lax`; the checked browser run produced no warning or error. This is evidence for that demonstrated workflow, not every possible hosted failure case.
+See the [case study](dist/cases/exception-studio.html), [public implementation](https://github.com/dhrubasuz/exception-studio), [live verification with traces and runtime revision](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md), [architecture](https://github.com/dhrubasuz/exception-studio/blob/main/docs/TEAM_ARCHITECTURE.md) and [security scope](https://github.com/dhrubasuz/exception-studio/blob/main/SECURITY.md).
 
-Only bundled fictional fixtures are accepted. Review notes reach the server and must remain fictional. Anonymous sandboxes expire after 24 hours, public storage may reset on redeployment, and application cleanup does not promise secure erasure. There are no verified organisational approval identities or production-service claims. See the [case study](dist/cases/exception-studio.html) and [application security scope](https://github.com/dhrubasuz/exception-studio/blob/main/SECURITY.md).
+The two accounts are fictional and controlled by the same visitor. This is no claim of independently verified human approval, customer savings, production qualification or a universal exactly-once guarantee. Workspaces expire after 24 hours. Processing runs while the hosted web process is active; deployment/storage replacement can reset demo state. UI unit tests use a simulated DOM; browser evidence and complete accessibility/security audits are separate.
+
+The [Classic Edition](https://studio.dhrub.com.np/classic) retains the original structured-data review and frozen-CSV workflow. Its earlier **27 October 2026** hosted walkthrough produced 21 accepted records, no held records and one explained exclusion; the CSV hash matched its manifest. The retained video is explicitly labelled Classic Edition rather than implying it demonstrates the newer team workflow.
 
 ## Commercial website evidence
 
