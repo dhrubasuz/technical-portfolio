@@ -1,0 +1,31 @@
+/* Broader technical practice and expanded project collection. Author: Dhruba Poudel. */
+.practice-section { padding-block: 76px 84px; border-top: 1px solid var(--line); }
+.practice-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+.practice-card { min-width: 0; padding: 28px 27px 26px; background: var(--paper); }
+.practice-index { display: block; font-size: .65rem; color: var(--teal-dark); letter-spacing: .12em; margin-bottom: 20px; }
+.practice-card h3 { max-width: 290px; font-size: 1.15rem; line-height: 1.3; letter-spacing: -.025em; }
+.practice-card p { margin-top: 15px; color: var(--muted); font-size: .81rem; line-height: 1.8; }
+.practice-card ul { display: flex; flex-wrap: wrap; gap: 5px 13px; padding: 0; margin: 20px 0 0; list-style: none; color: var(--teal-dark); font-size: .62rem; }
+.practice-foot { display: flex; justify-content: space-between; align-items: center; gap: 35px; margin-top: 27px; }
+.practice-foot p { max-width: 800px; font-size: .84rem; color: var(--muted); }
+.practice-foot .text-link { flex-shrink: 0; font-size: .75rem; }
+.expanded-collection { margin-bottom: 46px; }
+.expanded-projects { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; }
+.expanded-project { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; background: #fbfaf6; }
+.expanded-project-image { display: block; background: var(--warm); }
+.expanded-project-image img { width: 100%; aspect-ratio: 1200 / 630; object-fit: cover; }
+.expanded-project-copy { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 26px 24px 28px; }
+.expanded-project h3 { font-size: 1.45rem; line-height: 1.2; }
+.expanded-project h3 a { text-decoration: none; }
+.expanded-project h3 a:hover { color: var(--teal-dark); }
+.expanded-project-copy > p { margin-top: 17px; font-size: .83rem; color: var(--muted); line-height: 1.8; }
+.expanded-project-copy .expanded-project-scope { padding-top: 17px; border-top: 1px solid var(--line); font-size: .69rem; margin-bottom: 24px; }
+.expanded-project-copy .text-link { margin-top: auto; font-size: .74rem; }
+.expanded-project .project-meta { line-height: 1.7; }
+@media (min-width: 781px) and (max-width: 1100px) { .site-nav { gap: 18px; } .site-nav a { font-size: .77rem; } .expanded-projects { gap: 15px; } .expanded-project-copy { padding-inline: 20px; } .practice-card { padding-inline: 23px; } }
+@media (max-width: 900px) { .practice-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .practice-foot { align-items: flex-start; flex-direction: column; gap: 18px; } }
+@media (max-width: 780px) { .practice-section { padding-block: 52px 58px; } .expanded-projects { grid-template-columns: 1fr; gap: 25px; } .expanded-project-copy { padding: 25px; } .expanded-project-copy > p { max-width: 620px; } .practice-card { padding: 25px; } }
+@media (max-width: 520px) { .practice-grid { grid-template-columns: 1fr; } .practice-card h3 { max-width: none; } .practice-card { padding: 25px 23px; } .expanded-project-copy { padding-inline: 23px; } }
+
+/* Broader case mobile navigation. */
+@media (max-width:520px) { .site-nav, .js .site-nav.is-open { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px 24px; } .site-nav .nav-contact { grid-column:1 / -1; justify-self:start; } }

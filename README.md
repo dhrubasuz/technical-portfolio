@@ -2,7 +2,7 @@
 
 Practical work across software development, automation, data analysis and IT operations.
 
-This repository contains a buildless portfolio website, thirteen selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
+This repository contains a buildless portfolio website, sixteen selected projects, and browser-based data and machine-learning demonstrations. Separate application repositories provide the full-stack implementations. Public examples use fictional information. Employer systems, client data and private project source are not bundled here.
 
 ## Live portfolio
 
@@ -16,31 +16,34 @@ This repository contains a buildless portfolio website, thirteen selected projec
 
 ## Evidence snapshots
 
-The homepage evidence section is separate from the thirteen-project collection. Each snapshot connects a specific figure to the work, its verification and its scope.
+The homepage evidence section is separate from the sixteen-project collection. Each snapshot connects a specific figure to the work, its verification and its scope.
 
 | Snapshot | Verified scope | Inspect |
 | --- | --- | --- |
 | Automation | 17-field Excel/VBA import contract; mandatory-data, mapping, duplicate and reconciliation checks. Controlled UAT; paired time savings are not yet established. | [Workflow and measurement approach](dist/evidence/automation.html) · [Sanitised verification record](dist/evidence/automation-verification.json) |
-| Commercial web delivery | Two commercial WordPress websites designed and developed by Dhruba Poudel: Zamtas and Zamtas Traffic. No conversion or revenue uplift is claimed. | [Delivery evidence](dist/evidence/websites.html) · [Paired case study](dist/cases/zamtas-websites.html) |
+| Commercial web delivery | Two selected commercial WordPress websites designed and developed by Dhruba Poudel, presented anonymously. No conversion or revenue uplift is claimed. | [Delivery evidence](dist/evidence/websites.html) · [Paired case study](dist/cases/commercial-product-websites.html) |
 | Application engineering | Exception Studio Team Edition: 110 automated tests (81 domain/store/HTTP/transport and 29 simulated-DOM UI tests); seven hosted recovery scenarios recorded on 28 October 2026 using fictional data. | [Engineering evidence](dist/evidence/engineering.html) · [Hosted verification](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md) |
 
 Delivery counts, test counts and measured improvements are different quantities. A snapshot does not convert one into another or imply production reliability. The original cover images credit Dhruba Poudel; page authorship metadata preserves the same attribution.
 
-The web snapshot also records a separate mobile Lighthouse baseline for the portfolio homepage on 29 October 2026: Performance 90, Accessibility 96, Best Practices 100 and SEO 100. It is a single lab run before the evidence section was added, not a Zamtas result or an improvement claim. [Baseline conditions and record](dist/evidence/websites.html#baseline).
+The web snapshot also records a separate mobile Lighthouse baseline for the portfolio homepage on 29 October 2026: Performance 90, Accessibility 96, Best Practices 100 and SEO 100. It is a single lab run before the evidence section was added, not a client-website result or an improvement claim. [Baseline conditions and record](dist/evidence/websites.html#baseline).
 
 ## Selected projects
 
 | Project | Purpose | Scope |
 | --- | --- | --- |
+| [SlingBurst](dist/cases/slingburst.html) | Develop a cross-platform ricochet game with deterministic gameplay, adaptive layouts, progression and optional cloud saves. | Expo/React Native. A signed Android candidate and 188 automated checks are recorded in the 23 September 2026 handoff; device acceptance and store publication remain separate. |
+| [Purano Maidan](dist/cases/purano-maidan.html) | Connect venue discovery, role-based bookings, teams, tournaments and community workflows. | Preview/controlled beta. Dated local UAT records 97 app checks and a separate 33-check API suite; real external-service acceptance remains separate. |
+| [Commerce Pricing Engine](dist/cases/commerce-pricing-engine.html) | Combine a custom storefront theme, central pricing rules, catalogue migration and a no-payment quote workflow. | Anonymous WordPress/WooCommerce staging case; pricing/feed/public launch remain controlled and owner acceptance is pending. |
 | [Trust Boundary Lab](dist/articles/payment-workflow-security.html) | Explain a fictional campaign command through account authorization, trusted billing eligibility, idempotent intent and simulated delivery revalidation. | Original dependency-free Node.js teaching model and technical article; 41 passing tests. In-memory and synchronous, with no ads, payments or external service. |
 | [RouteLab](dist/cases/route-lab.html) | Diagnose a fictional network through packet tracing, configuration changes and a reproducible request/response result. | Separate React/TypeScript application with original SVG topology, IPv4 routing, stateless firewall rules and bounded TTL. Educational simulation; no real network probes. |
 | [FigureRelay](https://github.com/dhrubasuz/FigureRelay) | Keep linked figures consistent across reports and presentations, then review and export an exact revision. | Separate local Python/FastAPI, SQLite and React/TypeScript prototype; Apache-2.0. |
 | [Exception Studio Team Edition](dist/cases/exception-studio.html) | Recover failed integrations through durable jobs, analyst review, separate approval and receipt evidence. | Live React/TypeScript, Node 24 and SQLite lab; fictional accounts/data, 24-hour workspaces, 110 automated tests and seven live scenarios verified 28 October 2026. Classic CSV review retained. |
 | [DataWorkbench](dist/lab/index.html) | Inspect a fictional service-operations dataset, validate CSV rows, explore metrics and review exceptions. | HTML/CSS/JavaScript demonstration; data processing stays in browser memory. |
 | [PocketArcade](https://arcade.suzata.com.np) | Explore a browser-game collection with Relaxed/Classic play pace and device-local best scores. | Existing public browser demonstration; its private source is not copied into this repository. |
-| [Fuzion Driving School](https://fuziondrivingschool.com.au/) | Connect a responsive service website to developed booking and learner/instructor workflows. | Live public website; signed-in operational acceptance is separate. Private source. |
+| [Service Booking Platform](dist/cases/service-booking-platform.html) | Connect a responsive service website to developed customer/operator workflows and transactional scheduling. | Anonymous client delivery. Public website delivered; protected operational acceptance is separate. Private source. |
 | [Commerce Reconcile & Commerce Canvas](dist/cases/commerce-reconcile.html) | Review commerce-event differences with an original WordPress plugin and PHP engine; explore a custom theme and brand system. | Original public source, fictional-data PHP demo and static theme preview. Actual local WordPress/WooCommerce execution documented separately. |
-| [Zamtas websites](dist/cases/zamtas-websites.html) | Present specialist corporate/door-system information and a separate traffic-products catalogue. | Website design and development; two public WordPress websites presented as one paired case. Private source and operational records remain separate. |
+| [Commercial Product Websites](dist/cases/commercial-product-websites.html) | Structure two related product websites for distinct audiences and enquiry paths. | Anonymous website design/development case; two WordPress websites in one paired study. Private source and operational records remain separate. |
 | [MRR Free Tools](https://tools.dhrub.com.np/) | Support everyday document, image and data tasks in a TypeScript browser workspace. | Live guide and application; supported local-file workflows have documented format/network limits. Private source. |
 | AlloyPDF | Integrate document workflows into a dedicated React/TypeScript PDF workspace. | Internal development build; local browser tools and private-service foundations have separate availability. Private source; open-source engines credited. |
 | Helpdesk Air | Connect queues, configurable workflows, service targets and persisted operational reporting. | Controlled Python/FastAPI/PostgreSQL test environment; separate Zammad self-hosted package. Private source and records. |
@@ -50,7 +53,7 @@ The website's [case studies](dist/index.html) explain the problem, personal cont
 
 ## Development and design capabilities
 
-I build custom WordPress themes and plugins, integrate APIs, and develop responsive websites and WooCommerce stores with payment integrations. I also create logos and brand identities.
+I develop full-stack web applications, cross-platform mobile/game software, custom WordPress themes and plugins, WooCommerce workflows, APIs and data automation. I also create logos and brand identities. Enterprise systems work includes requirements, technical triage, provider coordination, testing and reporting; each case states its actual delivery stage.
 
 These capabilities match my LinkedIn About and Skills sections. Individual case studies describe the contribution and delivery stage for that project.
 
@@ -98,11 +101,19 @@ The two accounts are fictional and controlled by the same visitor. This is no cl
 
 The [Classic Edition](https://studio.dhrub.com.np/classic) retains the original structured-data review and frozen-CSV workflow. Its earlier **27 October 2026** hosted walkthrough produced 21 accepted records, no held records and one explained exclusion; the CSV hash matched its manifest. The retained video is explicitly labelled Classic Edition rather than implying it demonstrates the newer team workflow.
 
-## Commercial website evidence
+## Anonymous client delivery
 
-The paired Zamtas case showcases the website design and development by Dhruba Poudel for [zamtas.com.au](https://zamtas.com.au/) and [zamtastraffic.com.au](https://zamtastraffic.com.au/). It uses public homepage images and an original experience map, without publishing private administration screens or claiming measured business results.
+Commercial case studies use sector-based titles, original explanatory diagrams and sanitised technical descriptions. Client names, logos, domains, live URLs, identifying page captures and private operational records are omitted. My own product names and permitted public source links remain visible.
 
-Fuzion's public website is live; signed-in acceptance and actual notification receipt are separate. Two private scheduling-domain suites were freshly checked on **27 October 2026: 14 tests passed**, covering Sydney daylight-saving transitions, closures, recurring selections, booking conflicts and package-price allocation. The **230 checks** reported in the **9 October release record** are historical evidence from that release, not the count rerun on 27 October. No real bookings or provider workflows were exercised by the fresh domain check.
+The [Commercial Product Websites](dist/cases/commercial-product-websites.html) case explains the design/development of two related WordPress websites. The [Service Booking Platform](dist/cases/service-booking-platform.html) case describes responsive web delivery, transactional booking rules, role-scoped access and isolated staging. The [Commerce Pricing Engine](dist/cases/commerce-pricing-engine.html) case documents original theme/plugin development and a hosted staging quote journey with payments disabled.
+
+The service-booking project's two private scheduling-domain suites recorded **14 passing tests on 27 October 2026**, covering Sydney daylight-saving transitions, closures, recurring selections, booking conflicts and package-price allocation. The **230 checks** in its **9 October release record** are historical evidence from that release, not the count rerun on 27 October. No real bookings or provider workflows were exercised by that domain check.
+
+## A broader professional practice
+
+The homepage's six-area work map covers business systems/integrations, automation/data quality, dashboards/decision support, website delivery, identity/IT operations and technical service leadership. These recurring contributions are separate from the sixteen project entries and three selected evidence snapshots. Editorial groupings and hosting-entry counts are not presented as completed-project or lifetime-achievement metrics.
+
+New mobile/marketplace cases retain their actual delivery stages: **SlingBurst** has a documented signed Android release candidate; **Purano Maidan** remains a preview/controlled beta. Source may remain private even where a public case is available. Historical checks are dated; neither case claims fresh production qualification, store release, live merchant acceptance or measured customer adoption.
 
 ## DataWorkbench demonstration
 

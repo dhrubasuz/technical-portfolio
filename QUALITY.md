@@ -12,7 +12,7 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 ## Static portfolio checks
 
-- Serve `dist/` and follow all thirteen selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired Zamtas websites count as one project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
+- Serve `dist/` and follow all sixteen selected projects through their linked case/demo pages, including `/lab/` and `/ai-lab/`. The paired commercial product websites count as one anonymous project case; Commerce Reconcile and Commerce Canvas form one WordPress engineering/design case.
 - Verify internal navigation, external project links, image paths, page titles and readable text.
 - Check desktop and narrow/mobile layouts, keyboard focus, navigation order and colour contrast.
 - Confirm that buttons and links do what their labels promise and that external/private-source boundaries are clear.
@@ -20,13 +20,23 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 These checks require browser inspection. A successful data test command does not establish that the portfolio pages work correctly.
 
+## Broader practice and anonymous cases — 29 October 2026
+
+- The collection contains sixteen project entries, with three selected evidence cards and six professional-practice areas. Hosting entries, editorial workstreams, application versions and individual test suites are not counted as separate delivered projects.
+- Confirm the new mobile filter, reset/search behaviour and count across the compact additions, detailed cases and supporting collection. Keep all three project collections keyboard reachable and narrow-screen readable.
+- Scan visible copy, hidden search terms, page metadata, links, asset paths and original images for client identifiers. Commercial cases use generic titles and original diagrams. My own projects retain their names. Do not publish client screenshots, private source or operational records.
+- Keep SlingBurst's 23 September 2026 signed Android candidate and 188 checks explicitly dated. Device acceptance, final package/certificate inspection and Google Play publication remain separate.
+- Keep Purano Maidan's 28 August 2026 app UAT and separate API suite distinct; do not automatically add the counts. Preview pages do not establish accepted merchant, notification or production workflows.
+- The anonymous commerce-pricing case describes installed staging theme/plugin work and a no-payment quote journey. A paused price feed, draft catalogue and pending owner acceptance must not become a live-commerce claim.
+- Root publication verification must follow source/privacy review, static checks, browser responsive/link inspection and deployment read-back. These editorial notes do not themselves claim that those release checks have run.
+
 ## Evidence snapshots added on 29 October 2026
 
-- The three evidence cards are a separate homepage section, not additional entries in the thirteen-project collection. Project filtering and the displayed project count retain their existing scope.
+- The three evidence cards are a separate homepage section, not additional entries in the sixteen-project collection. Project filtering and the displayed project count retain their existing scope.
 - Each landing page has Dhruba Poudel authorship metadata, its own canonical URL, a matching Open Graph cover, one primary heading, labelled section navigation and explicit verification boundaries.
 - The automation snapshot uses the 17-field schema and four validation areas from the current workflow. It does not attribute tests from a different version or application to that workflow, and it leaves time savings unclaimed until comparable paired measurements exist.
-- The web-delivery snapshot links both live Zamtas websites and the existing case study. A delivery count is not presented as conversion, revenue or performance uplift.
-- A separate mobile Lighthouse baseline names the portfolio homepage, single-run setup, timestamp and pre-evidence-section scope. Its category scores and lab metrics are not attributed to the Zamtas websites or presented as real-user data.
+- The web-delivery snapshot links an anonymous paired product-website case with no client names or direct client URLs. A delivery count is not presented as conversion, revenue or performance uplift.
+- A separate mobile Lighthouse baseline names the portfolio homepage, single-run setup, timestamp and pre-evidence-section scope. Its category scores and lab metrics are not attributed to client websites or presented as real-user data.
 - The engineering snapshot separates 81 domain/store/HTTP/transport tests, 29 simulated-DOM UI tests and seven hosted recovery scenarios. Fictional demo outcomes are not presented as a production success rate.
 - Before publishing, run the static-site checker after the three cover images and sanitised automation JSON are in place. Inspect the homepage cards and each landing page at desktop and narrow widths, follow the evidence links and verify the deployed URLs. This note records the content boundaries; it does not claim those publication checks have already run.
 
@@ -146,15 +156,15 @@ Use the [public browser site](https://arcade.suzata.com.np) for the portfolio li
 
 Do not infer a Play Store/App Store release, a completed test count or access to private source from a working public website. Keep private source private unless a separate, reviewed public version is deliberately prepared.
 
-## Zamtas websites evidence
+## Anonymous commercial product websites
 
-The paired [Zamtas case](dist/cases/zamtas-websites.html) presents [zamtas.com.au](https://zamtas.com.au/) and [zamtastraffic.com.au](https://zamtastraffic.com.au/) as two public websites within one design/development project. Dhruba Poudel confirmed his design/development contribution. The case uses public homepage images and an original conceptual experience map, not private administration screens.
+The paired [Commercial Product Websites case](dist/cases/commercial-product-websites.html) describes two related websites in one design/development project. The public presentation uses generic sector descriptions and original explanatory diagrams. Client names, domains, direct links, branded screenshots and private administration screens are omitted.
 
-Review both public sites and the portfolio screenshots for actual navigation, readable product/service information, mobile layout and link behaviour. Distinguish public observation from access to the private implementation. Do not infer custom plugin development, search ranking, conversion improvements, accessibility certification or business results without corresponding evidence. Keep private source, forms, account details and operational records out of publication.
+Review the case's navigation, diagram readability and mobile layout. Retain delivery/contribution evidence privately, separate from the public repository. Do not infer custom plugin development, search ranking, conversion improvements, accessibility certification or business results without corresponding evidence.
 
-## Fuzion Driving School evidence
+## Anonymous service-booking platform
 
-Fuzion's live public homepage is distinct from acceptance of signed-in learner/instructor operations, actual message receipt, timed reminders or live card payments. The private source remains private; the public case uses the website and original conceptual diagrams.
+The [Service Booking Platform case](dist/cases/service-booking-platform.html) distinguishes public website delivery from acceptance of protected customer/operator workflows, message receipt, timed reminders or live card payments. Client identity and direct URL are withheld; private source stays private. Public visuals explain scheduling and role boundaries using fictional labels.
 
 Keep these test records separate:
 

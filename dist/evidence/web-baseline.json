@@ -6,13 +6,24 @@
   "url": "https://about.dhrub.com.np/",
   "report_url": "https://pagespeed.web.dev/analysis/https-about-dhrub-com-np/lpx9smp9xe?form_factor=mobile",
   "captured_at": "2026-10-29T13:24:01+11:00",
-  "scope": "Single initial-page-load lab baseline for this portfolio homepage before its evidence-card section was added. This is not a measurement of Zamtas or Zamtas Traffic.",
+  "scope": "Single initial-page-load lab baseline for this portfolio homepage before the evidence-card section and later broader-work update. This is not a measurement of any client website.",
   "strategy": "mobile",
   "lighthouse_version": "13.5.0",
   "device": "Emulated Moto G Power",
   "network": "Slow 4G throttling",
-  "scores_out_of_100": {"performance": 90, "accessibility": 96, "best_practices": 100, "seo": 100},
-  "metrics": {"fcp_seconds": 2.8, "lcp_seconds": 2.8, "total_blocking_time_ms": 0, "cumulative_layout_shift": 0.004, "speed_index_seconds": 3.8},
+  "scores_out_of_100": {
+    "performance": 90,
+    "accessibility": 96,
+    "best_practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "fcp_seconds": 2.8,
+    "lcp_seconds": 2.8,
+    "total_blocking_time_ms": 0,
+    "cumulative_layout_shift": 0.004,
+    "speed_index_seconds": 3.8
+  },
   "real_user_data": "No CrUX data available in this report.",
   "interpretation": "A dated lab observation. Scores can vary between runs; no improvement, real-user reliability, commercial outcome or comprehensive accessibility guarantee is claimed."
 }
