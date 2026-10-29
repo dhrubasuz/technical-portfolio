@@ -1,0 +1,66 @@
+{
+  "author": "Dhruba Poudel",
+  "creator": "Dhruba Poudel",
+  "last_modified_by": "Dhruba Poudel",
+  "content_id": "automation-evidence-2026-10-29",
+  "verified_on": "2026-10-29",
+  "title": "Forecast import automation",
+  "status": "STRUCTURAL_EVIDENCE_VERIFIED",
+  "card": {
+    "eyebrow": "Business process automation",
+    "metric_value": 17,
+    "metric_label": "output fields",
+    "headline": "A controlled forecast-import workflow",
+    "description": "I developed an Excel/VBA workflow for transforming source data into a structured import format, with validation, exception review and audit logging.",
+    "scope_note": "Controlled UAT. The 17-field count describes the output schema; business time savings have not yet been measured."
+  },
+  "verified_figures": [
+    {
+      "value": 17,
+      "unit": "output-schema fields",
+      "method": "Read-only count of populated headers in the saved candidate",
+      "scope": "Schema size, not a productivity or accuracy measure"
+    }
+  ],
+  "implementation_scope": [
+    "Excel/VBA development",
+    "Structured transformation and mapping",
+    "Validation and exception review",
+    "Audit and review logs"
+  ],
+  "project_stage": "Controlled UAT",
+  "business_results": {
+    "time_reduction_percent": null,
+    "hours_saved": null,
+    "error_reduction_percent": null,
+    "measurement_status": "Comparable accepted manual and automated run durations are not yet recorded."
+  },
+  "case_outline": [
+    {
+      "label": "Problem",
+      "text": "Prepare consistent import data while making mapping and review decisions traceable."
+    },
+    {
+      "label": "What I built",
+      "text": "An Excel/VBA transformation workflow with a 17-field output schema, validation and review controls."
+    },
+    {
+      "label": "Evidence",
+      "text": "The saved candidate contains 17 populated output headers and dedicated activity, export and review logs."
+    },
+    {
+      "label": "Current stage",
+      "text": "Controlled UAT. Production acceptance is a separate approval step."
+    },
+    {
+      "label": "Next measurement",
+      "text": "Compare recorded manual and automated completion times for matching test batches, including review and corrections."
+    }
+  ],
+  "publication_limits": [
+    "Do not convert the schema count into an efficiency claim.",
+    "Do not attribute historical checks on earlier versions to the current candidate.",
+    "Do not claim production acceptance or measured time savings."
+  ],
+  "sanitized": true
+}

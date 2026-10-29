@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="Exception Studio Team Edition engineering evidence by Dhruba Poudel: 110 automated tests and seven hosted recovery scenarios using fictional data.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Engineering evidence — Dhruba Poudel">
+  <meta property="og:description" content="110 automated tests. Seven hosted recovery scenarios. Inspect the code, live demo and recorded outcomes for Exception Studio Team Edition.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/evidence/engineering.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/evidence-engineering.png">
+  <meta property="og:image:alt" content="Dhruba Poudel — Exception Studio: 110 automated tests and seven hosted recovery scenarios">
+  <link rel="canonical" href="https://about.dhrub.com.np/evidence/engineering.html">
+  <title>Engineering evidence — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <link rel="stylesheet" href="../assets/evidence-cards.css?v=20261029">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+</head>
+<body class="evidence-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button><nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation"><a href="../index.html#evidence">Evidence</a><a href="../index.html#work">Selected work</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a></nav></div></header>
+  <main id="main">
+    <section class="case-hero wrap" aria-labelledby="engineering-title">
+      <a class="back-link" href="../index.html#evidence"><span aria-hidden="true">←</span> All evidence snapshots</a>
+      <div class="case-hero-grid"><div><p class="eyebrow">Engineering evidence / Exception Studio Team Edition</p><h1 id="engineering-title">The recovery path deserves working code.</h1><p class="case-lead">I built a team workflow for investigating exceptions, approving delivery and recovering failed jobs, then checked the behaviour locally and on the hosted demo.</p><div class="case-links"><a class="button" href="https://studio.dhrub.com.np/" target="_blank" rel="noopener noreferrer">Try the live demo <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/dhrubasuz/exception-studio" target="_blank" rel="noopener noreferrer">Inspect the code <span aria-hidden="true">↗</span></a></div></div><dl class="case-meta"><div><dt>My role</dt><dd>Full-stack application design and development</dd></div><div><dt>Stack</dt><dd>React · TypeScript · Node.js · SQLite</dd></div><div><dt>Verified</dt><dd>28 October 2026 · Recorded hosted scenarios</dd></div><div><dt>Environment</dt><dd>Public demonstration with fictional data</dd></div></dl></div>
+    </section>
+    <div class="wrap evidence-summary" aria-label="Engineering evidence at a glance"><div class="evidence-stat"><strong>110</strong><span>automated tests: 81 domain/store/transport + 29 UI</span></div><div class="evidence-stat"><strong>7</strong><span>hosted recovery scenarios</span></div><div class="evidence-stat"><strong>7 / 7</strong><span>delivered jobs / destination writes in those scenarios</span></div></div>
+    <div class="wrap case-body">
+      <nav class="case-index" aria-label="Evidence sections"><h2>Inside the evidence</h2><ol><li><a href="#architecture">01 · What I built</a></li><li><a href="#tests">02 · Automated coverage</a></li><li><a href="#hosted">03 · Hosted verification</a></li><li><a href="#inspect">04 · Inspect the work</a></li></ol></nav>
+      <div class="case-content">
+        <section id="architecture"><h2>Give exceptions a place, an owner and a next step.</h2><p>Exception Studio turns a failed or questionable record into a visible workflow. An analyst can investigate and repair it; a separate approver role controls the next delivery step. Durable jobs and an audit trail keep the state understandable when an attempt fails.</p><p>The Team Edition connects a React and TypeScript interface to a Node.js API and SQLite store. I built bounded retry behaviour, schema repair, lease fencing, reasoned replay and duplicate-safe sandbox delivery into the flow.</p><ul class="tags" aria-label="Engineering focus"><li>React &amp; TypeScript</li><li>Node.js API</li><li>SQLite persistence</li><li>Durable jobs</li><li>Role checks</li><li>Failure recovery</li></ul><p class="evidence-note">The demo’s analyst and approver roles demonstrate access separation in code. They do not establish enterprise identity integration or an independent human approval process.</p></section>
+        <section id="tests"><h2>110 tests, with the layers named.</h2><p>The test total is a sum of defined suites, rather than a claim about every possible application behaviour.</p><dl class="evidence-record"><div><dt>81 tests</dt><dd>Domain, persistence, HTTP and transport behaviour, including the rules and state transitions behind the workflow.</dd></div><div><dt>29 tests</dt><dd>UI behaviour in a simulated DOM. These checks exercise interface states and interactions; they are distinct from full-browser end-to-end tests.</dd></div><div><dt>Count scope</dt><dd>110 automated tests in the recorded Team Edition verification. The public repository contains the code and test definitions.</dd></div></dl><div class="evidence-callout"><h3>What the count establishes</h3><p>These checks provide repeatable evidence for the covered behaviour. A test total alone does not establish complete security, accessibility, production reliability or performance under load.</p></div></section>
+        <section id="hosted"><h2>Check the deployed recovery path.</h2><p>On 28 October 2026, I verified seven recovery scenarios against the hosted application using fictional workspaces and records. The recorded outcomes show seven delivered jobs and seven destination writes, including one recognised duplicate.</p><p>That destination check matters: an apparently successful retry is not enough if the destination receives the same intended result twice. The verification record connects each scenario to the resulting job and destination state.</p><dl class="evidence-record"><div><dt>Environment</dt><dd>The hosted public demo with fictional data and a sandbox destination.</dd></div><div><dt>Recorded scope</dt><dd>Seven selected recovery scenarios, with seven delivered jobs, seven destination writes and one recognised duplicate.</dd></div><div><dt>Interpretation</dt><dd>Observed results for these cases. They are not a production success-rate estimate or a guarantee of exactly-once effects in every external system.</dd></div></dl></section>
+        <section id="inspect"><h2>Try it, read the decisions and check the record.</h2><p>The live demonstration shows the workflow. The repository makes the implementation inspectable, and the verification record captures the hosted checks separately from the automated suite.</p><div class="evidence-resource-list"><a href="https://studio.dhrub.com.np/" target="_blank" rel="noopener noreferrer"><span>Open Exception Studio Team Edition</span><span aria-hidden="true">↗</span></a><a href="https://github.com/dhrubasuz/exception-studio" target="_blank" rel="noopener noreferrer"><span>Read the source and automated tests</span><span aria-hidden="true">↗</span></a><a href="https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md" target="_blank" rel="noopener noreferrer"><span>Inspect the hosted verification · 28 October 2026</span><span aria-hidden="true">↗</span></a><a href="../cases/exception-studio.html"><span>Read the full technical case study</span><span aria-hidden="true">→</span></a></div></section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#evidence">Back to evidence <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

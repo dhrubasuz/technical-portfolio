@@ -20,6 +20,16 @@ Use fictional fixtures and screenshots. Keep credentials, private repositories, 
 
 These checks require browser inspection. A successful data test command does not establish that the portfolio pages work correctly.
 
+## Evidence snapshots added on 29 October 2026
+
+- The three evidence cards are a separate homepage section, not additional entries in the thirteen-project collection. Project filtering and the displayed project count retain their existing scope.
+- Each landing page has Dhruba Poudel authorship metadata, its own canonical URL, a matching Open Graph cover, one primary heading, labelled section navigation and explicit verification boundaries.
+- The automation snapshot uses the 17-field schema and four validation areas from the current workflow. It does not attribute tests from a different version or application to that workflow, and it leaves time savings unclaimed until comparable paired measurements exist.
+- The web-delivery snapshot links both live Zamtas websites and the existing case study. A delivery count is not presented as conversion, revenue or performance uplift.
+- A separate mobile Lighthouse baseline names the portfolio homepage, single-run setup, timestamp and pre-evidence-section scope. Its category scores and lab metrics are not attributed to the Zamtas websites or presented as real-user data.
+- The engineering snapshot separates 81 domain/store/HTTP/transport tests, 29 simulated-DOM UI tests and seven hosted recovery scenarios. Fictional demo outcomes are not presented as a production success rate.
+- Before publishing, run the static-site checker after the three cover images and sanitised automation JSON are in place. Inspect the homepage cards and each landing page at desktop and narrow widths, follow the evidence links and verify the deployed URLs. This note records the content boundaries; it does not claim those publication checks have already run.
+
 ## Trust Boundary Lab publication checks
 
 The [technical article](dist/articles/payment-workflow-security.html) and [original Node.js lab](https://github.com/dhrubasuz/trust-boundary-lab) belong to a separate teaching-code release. Its documented regression suite contains **41 passing tests**. Keep that result attached to the lab source hashes and verification record; do not add it to this portfolio's existing data/model test count.

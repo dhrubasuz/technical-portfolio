@@ -14,7 +14,21 @@ This repository contains a buildless portfolio website, thirteen selected projec
 
 [Read Trust Boundary Lab](https://about.dhrub.com.np/articles/payment-workflow-security.html) · [Public security-lab code](https://github.com/dhrubasuz/trust-boundary-lab) · [Download the original lab](https://about.dhrub.com.np/downloads/trust-boundary-lab.zip). The article and fictional model connect campaign-policy checks to inspectable regression evidence.
 
-## Explore the work
+## Evidence snapshots
+
+The homepage evidence section is separate from the thirteen-project collection. Each snapshot connects a specific figure to the work, its verification and its scope.
+
+| Snapshot | Verified scope | Inspect |
+| --- | --- | --- |
+| Automation | 17-field Excel/VBA import contract; mandatory-data, mapping, duplicate and reconciliation checks. Controlled UAT; paired time savings are not yet established. | [Workflow and measurement approach](dist/evidence/automation.html) · [Sanitised verification record](dist/evidence/automation-verification.json) |
+| Commercial web delivery | Two commercial WordPress websites designed and developed by Dhruba Poudel: Zamtas and Zamtas Traffic. No conversion or revenue uplift is claimed. | [Delivery evidence](dist/evidence/websites.html) · [Paired case study](dist/cases/zamtas-websites.html) |
+| Application engineering | Exception Studio Team Edition: 110 automated tests (81 domain/store/HTTP/transport and 29 simulated-DOM UI tests); seven hosted recovery scenarios recorded on 28 October 2026 using fictional data. | [Engineering evidence](dist/evidence/engineering.html) · [Hosted verification](https://github.com/dhrubasuz/exception-studio/blob/main/docs/LIVE_VERIFICATION.md) |
+
+Delivery counts, test counts and measured improvements are different quantities. A snapshot does not convert one into another or imply production reliability. The original cover images credit Dhruba Poudel; page authorship metadata preserves the same attribution.
+
+The web snapshot also records a separate mobile Lighthouse baseline for the portfolio homepage on 29 October 2026: Performance 90, Accessibility 96, Best Practices 100 and SEO 100. It is a single lab run before the evidence section was added, not a Zamtas result or an improvement claim. [Baseline conditions and record](dist/evidence/websites.html#baseline).
+
+## Selected projects
 
 | Project | Purpose | Scope |
 | --- | --- | --- |

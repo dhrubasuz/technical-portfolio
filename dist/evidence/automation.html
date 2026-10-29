@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="Dhruba Poudel's Excel/VBA automation evidence: a 17-field import contract, validation gates, exception review and a defined approach to measuring time savings.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Automation evidence — Dhruba Poudel">
+  <meta property="og:description" content="A 17-field output contract, explicit validation gates and exception review. Inspect the workflow and the scope of its evidence.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/evidence/automation.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/evidence-automation.png">
+  <meta property="og:image:alt" content="Dhruba Poudel — Automation evidence: 17 output fields, validation and exception review">
+  <link rel="canonical" href="https://about.dhrub.com.np/evidence/automation.html">
+  <title>Automation evidence — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <link rel="stylesheet" href="../assets/evidence-cards.css?v=20261029">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+</head>
+<body class="evidence-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button><nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation"><a href="../index.html#evidence">Evidence</a><a href="../index.html#work">Selected work</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a></nav></div></header>
+  <main id="main">
+    <section class="case-hero wrap" aria-labelledby="automation-title">
+      <a class="back-link" href="../index.html#evidence"><span aria-hidden="true">←</span> All evidence snapshots</a>
+      <div class="case-hero-grid"><div><p class="eyebrow">Automation evidence / Excel &amp; VBA</p><h1 id="automation-title">A repeatable import starts with a clear contract.</h1><p class="case-lead">I built a forecast-import workflow around a 17-field output schema, with explicit checks and a reviewable exception path.</p><div class="case-links"><a class="button" href="#workflow">Follow the workflow <span aria-hidden="true">↓</span></a><a class="text-link" href="automation-verification.json" target="_blank" rel="noopener noreferrer">Verification record <span aria-hidden="true">↗</span></a></div></div><dl class="case-meta"><div><dt>My role</dt><dd>Workflow analysis and Excel/VBA development</dd></div><div><dt>Stage</dt><dd>Controlled user acceptance testing</dd></div><div><dt>Evidence</dt><dd>Defined output schema and code-level validation controls</dd></div><div><dt>Data boundary</dt><dd>Generic description; operational records remain private</dd></div></dl></div>
+    </section>
+    <div class="wrap evidence-summary" aria-label="Automation evidence at a glance"><div class="evidence-stat"><strong>17</strong><span>fields in the output contract</span></div><div class="evidence-stat"><strong>4</strong><span>validation areas before acceptance</span></div><div class="evidence-stat"><strong>UAT</strong><span>controlled verification stage</span></div></div>
+    <div class="wrap case-body">
+      <nav class="case-index" aria-label="Evidence sections"><h2>Inside the evidence</h2><ol><li><a href="#workflow">01 · Workflow</a></li><li><a href="#controls">02 · Validation</a></li><li><a href="#measurement">03 · Measurement</a></li><li><a href="#record">04 · Inspect the record</a></li></ol></nav>
+      <div class="case-content">
+        <section id="workflow"><h2>Make the transformation predictable.</h2><p>My aim was to turn a recurring spreadsheet preparation task into a workflow with consistent inputs, visible rules and an agreed output shape. Excel and VBA handle the transformation; validation determines whether the result is ready for review.</p><ol class="evidence-steps"><li><strong>Prepare the source.</strong>Start with a defined batch and the mappings required by the import.</li><li><strong>Transform against the schema.</strong>Shape the output to a consistent 17-field contract rather than relying on ad hoc edits.</li><li><strong>Surface exceptions.</strong>Check mandatory values, mapping coverage, duplicates and reconciliation before accepting the output.</li><li><strong>Review and retain a trace.</strong>Keep exceptions and audit information visible so a reviewer can understand what needs attention.</li></ol><p class="evidence-note">This public description explains the workflow without exposing source records, account details, financial values or a private operational workbook.</p></section>
+        <section id="controls"><h2>The checks are part of the automation.</h2><p>A file can have the right columns and still contain unusable data. I treat the validation path as part of the result, including the cases that need a person to resolve them.</p><dl class="evidence-record"><div><dt>Mandatory data</dt><dd>Identify required information that is missing before the batch is accepted.</dd></div><div><dt>Mapping</dt><dd>Surface values that do not have an agreed mapping instead of silently guessing a replacement.</dd></div><div><dt>Duplicates</dt><dd>Flag missing or duplicate output references and block export for review.</dd></div><div><dt>Reconciliation</dt><dd>Compare route row counts and totals, with review or approved exclusions for differences.</dd></div><div><dt>Review trail</dt><dd>Record exceptions and audit information so the reviewer can trace the outcome.</dd></div></dl><div class="evidence-callout"><h3>Current delivery stage</h3><p>The saved v10 workflow is in controlled UAT. This page does not represent a production approval or an independently audited accuracy result.</p></div></section>
+        <section id="measurement"><h2>Measure the complete task before claiming savings.</h2><p>A short macro runtime would tell only part of the story. A useful comparison includes preparing the batch, processing it, reviewing exceptions and making corrections, with the same acceptance criteria for both methods.</p><ol><li>Use comparable batches with recorded row counts and similar exception patterns.</li><li>Record manual preparation, processing, review and correction minutes.</li><li>Record the same stages for the automated workflow, including human review.</li><li>Check that both outputs meet the same reconciliation and quality criteria.</li><li>Compare repeated paired runs before reporting a typical result.</li></ol><div class="evidence-callout"><h3>Time savings: not yet established</h3><p>I do not yet have verified paired manual and automated processing times for the current version. No hours-saved or percentage-improvement figure is claimed here.</p></div></section>
+        <section id="record"><h2>Keep the figure connected to its scope.</h2><p>The public verification record captures the evidence that can be shared. The 17-field count describes the output structure; it does not measure transaction volume, financial accuracy or time saved.</p><div class="evidence-resource-list"><a href="automation-verification.json" target="_blank" rel="noopener noreferrer"><span>Open the sanitised verification record · JSON</span><span aria-hidden="true">↗</span></a><a href="../lab/"><span>Explore my fictional-data workbench</span><span aria-hidden="true">→</span></a><a href="engineering.html"><span>See separately tested application engineering</span><span aria-hidden="true">→</span></a></div><p class="evidence-note">The data workbench and Exception Studio are separate portfolio applications. Their test counts are not attributed to this Excel/VBA workflow.</p></section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#evidence">Back to evidence <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
