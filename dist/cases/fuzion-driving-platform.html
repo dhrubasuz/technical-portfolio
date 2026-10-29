@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="Fuzion Driving School: website and booking-platform development by Dhruba Poudel, with architecture, transactional booking decisions and explicit release evidence.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Fuzion Driving School — Dhruba Poudel">
+  <meta property="og:description" content="From public service information to booking state, permission boundaries and controlled delivery. A technical case study by Dhruba Poudel.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/cases/fuzion-driving-platform.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/fuzion-homepage.png">
+  <meta property="og:image:alt" content="Fuzion Driving School public homepage with service information and lesson navigation">
+  <link rel="canonical" href="https://about.dhrub.com.np/cases/fuzion-driving-platform.html">
+  <title>Fuzion Driving School — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+  <style>
+    .case-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; margin-top:34px; padding-top:24px; border-top:1px solid var(--line); }
+    .case-summary dt { color:var(--teal-dark); font-size:.65rem; text-transform:uppercase; letter-spacing:.09em; font-weight:700; }
+    .case-summary dd { margin:9px 0 0; font-size:.83rem; line-height:1.7; color:var(--muted); }
+    .case-diagram { margin:28px 0; }
+    .case-diagram .diagram-scroll { overflow-x:auto; border:1px solid var(--line); border-radius:4px; background:#f7f6f1; }
+    .case-diagram img { width:100%; min-width:680px; height:auto; }
+    .case-diagram figcaption { margin-top:12px; color:var(--muted); font-size:.73rem; line-height:1.65; }
+    .case-diagram figcaption a { color:var(--teal-dark); }
+    .case-table-scroll { overflow-x:auto; margin-top:22px; border:1px solid var(--line); border-radius:4px; }
+    .case-table-scroll:focus-visible,.diagram-scroll:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+    .case-evidence { width:100%; min-width:590px; border-collapse:collapse; font-size:.79rem; line-height:1.65; }
+    .case-evidence caption { padding:17px 18px; text-align:left; font-weight:600; color:var(--ink); background:#e9efea; }
+    .case-evidence th,.case-evidence td { padding:16px 18px; text-align:left; vertical-align:top; border-top:1px solid var(--line); }
+    .case-evidence thead th { font-size:.67rem; text-transform:uppercase; letter-spacing:.06em; }
+    .case-evidence tbody th { width:25%; font-weight:600; }
+    .case-evidence td { color:var(--muted); }
+    .case-callout { margin-top:22px; padding:20px 22px; border-left:3px solid var(--teal); background:#e9efea; }
+    .case-callout strong { display:block; font-size:.8rem; margin-bottom:7px; }
+    .case-callout p { font-size:.8rem; }
+    @media(max-width:700px) { .case-summary { grid-template-columns:1fr; gap:18px; } .case-diagram figcaption { font-size:.7rem; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+        <a href="../index.html#work">Selected work</a><a href="../index.html#approach">Approach</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Get in touch <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#work"><span aria-hidden="true">←</span> All selected work</a>
+      <div class="case-hero-grid">
+        <div><p class="eyebrow">Commercial work · Website &amp; service workflows</p><h1>Fuzion Driving School</h1><p class="case-lead">Designing the customer journey and the application rules behind a lesson.</p><div class="case-links"><a class="button" href="https://fuziondrivingschool.com.au/" target="_blank" rel="noopener noreferrer">Visit the public website <span aria-hidden="true">↗</span></a><a class="text-link" href="#architecture">Explore the architecture <span aria-hidden="true">↓</span></a></div></div>
+        <dl class="case-meta"><div><dt>Project</dt><dd>Website and learner-platform development</dd></div><div><dt>Public status</dt><dd>Main-domain website live</dd></div><div><dt>Implementation</dt><dd>React · Node.js · Supabase/PostgreSQL</dd></div><div><dt>Source</dt><dd>Private · Public website available</dd></div></dl>
+      </div>
+      <dl class="case-summary"><div><dt>My contribution</dt><dd>Website design and development, role-aware interfaces, booking rules, testing and release preparation.</dd></div><div><dt>Engineering focus</dt><dd>Translate scheduling, access and service rules into explicit application and database behaviour.</dd></div><div><dt>Verified result</dt><dd>Main-domain public website released. Signed-in operations and actual message receipt retain separate acceptance work.</dd></div></dl>
+    </section>
+    <div class="wrap"><figure class="project-screenshot"><a href="../assets/fuzion-homepage.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Fuzion Driving School public homepage screenshot"><img src="../assets/fuzion-homepage.png" alt="The live Fuzion Driving School public homepage, showing its lesson information and navigation. No learner or staff records are shown." width="1265" height="712"></a><figcaption><span>Actual public homepage · 26 October 2026</span><span>Open image to inspect the detail ↗</span></figcaption></figure></div>
+    <div class="wrap case-body">
+      <nav class="case-index" aria-label="Case study sections"><h2>Inside the project</h2><ol><li><a href="#problem">01 · The problem</a></li><li><a href="#architecture">02 · Architecture</a></li><li><a href="#booking">03 · Booking decisions</a></li><li><a href="#validation">04 · Evidence &amp; delivery</a></li><li><a href="#scope">05 · Current boundaries</a></li></ol></nav>
+      <div class="case-content">
+        <section id="problem"><h2>Connect the customer journey to service operations.</h2><p>A driving-school website needs to explain the service clearly and provide a useful path from lesson selection to booking. Behind that public journey are availability rules, lesson records and different responsibilities for learners, instructors and administrators.</p><p>I designed and developed Fuzion Driving School’s responsive website and learner platform, bringing those requirements into one application while keeping public information and role-based workflows distinct.</p></section>
+        <section id="architecture"><h2>Keep the interface, data rules and delivery responsibilities clear.</h2><p>I built reusable React interfaces for public service information, learner preparation and role-aware workspaces. Supabase provides identity and controlled data access; PostgreSQL functions and constraints enforce the booking rules. Separate Node handlers support server-side delivery work.</p><figure class="case-diagram"><div class="diagram-scroll" role="region" aria-label="Scrollable Fuzion conceptual architecture" tabindex="0"><img src="../assets/fuzion-architecture.svg" alt="Conceptual architecture: React interfaces use Supabase identity and data APIs backed by PostgreSQL permissions and transactional rules. A separate Node delivery path works with the notification outbox and delivery adapter." width="1100" height="680" loading="lazy"></div><figcaption>Conceptual implementation overview by Dhruba Poudel. On a small screen, scroll the diagram or <a href="../assets/fuzion-architecture.svg" target="_blank" rel="noopener noreferrer">open the full diagram</a>.</figcaption></figure><h3>Access belongs in the data and service layers</h3><p>Learner, instructor and administration interfaces have different responsibilities. Role checks and row-level data policies support those boundaries; hiding an interface control alone cannot establish permission.</p><h3>Events and financial state need a durable record</h3><p>The implementation uses an append-only ledger for balance changes and an outbox for notification events. Delivery work is separate from the user action that creates an event, with idempotency controls intended to avoid duplicate processing.</p><ul class="tags" aria-label="Technologies and project focus"><li>React / JavaScript</li><li>Node.js</li><li>Supabase / PostgreSQL</li><li>SQL</li><li>FullCalendar</li><li>Vitest</li><li>Vite</li></ul></section>
+        <section id="booking"><h2>A booking button starts a state transition.</h2><p>Consider a fictional example: two learners select the same available lesson. A temporary hold helps the interaction, but the final operation still needs to recheck availability and commit the booking consistently.</p><p>I implemented expiring holds, transactional slot locking and an instructor-overlap constraint. Validation also covers selected dates, instructor consistency and scheduling exceptions. A failed selection must leave a useful explanation and a consistent result.</p><figure class="case-diagram"><div class="diagram-scroll" role="region" aria-label="Scrollable conceptual booking flow" tabindex="0"><img src="../assets/fuzion-booking-state.svg" alt="Conceptual booking flow: an available lesson can be held temporarily, then revalidated in a transaction before a booking is committed. Expiry releases a hold, conflicts return a reviewable failure and later changes require a separate validated transition." width="1100" height="600" loading="lazy"></div><figcaption>A simplified fictional journey, showing implementation decisions rather than evidence of a completed live booking. <a href="../assets/fuzion-booking-state.svg" target="_blank" rel="noopener noreferrer">Open the full diagram</a>.</figcaption></figure><h3>Edge cases are part of the design</h3><ul><li><strong>Competing requests:</strong> recheck the selected slots within the database transaction.</li><li><strong>Clock changes:</strong> calculate recurring appointments against Sydney wall time across daylight saving.</li><li><strong>Closed or elapsed dates:</strong> preserve schedule exceptions and exclude appointments that have passed.</li><li><strong>Invalid selections:</strong> reject duplicate slots, mixed instructors and active booking conflicts.</li></ul><p>Two scheduling-domain suites were freshly checked on 27 October 2026: 14 tests passed, covering Sydney daylight-saving transitions, availability closures, recurring-slot conflicts and package-price allocation. Database source contains the transactional and permission safeguards. Their existence is separate from a fresh end-to-end production test.</p></section>
+        <section id="validation"><h2>Keep the release evidence attached to its date.</h2><p>I delivered the main-domain website while retaining a recovery path for the previous site and preserving the existing hosting and email assignment. The record below distinguishes a public release, implementation checks and the operational work still requiring acceptance.</p><div class="case-table-scroll" role="region" aria-label="Scrollable Fuzion release evidence table" tabindex="0"><table class="case-evidence"><caption>Evidence reviewed for this case study · 27 October 2026</caption><thead><tr><th scope="col">Area</th><th scope="col">Available evidence</th><th scope="col">Meaning / next check</th></tr></thead><tbody><tr><th scope="row">Public release</th><td>The 9 October release record documents the main-domain launch, availability and login refresh checks, and anonymous administration redirect. The public homepage was reviewed again on 26 October.</td><td>Public website live. This establishes the public experience and the recorded release checks.</td></tr><tr><th scope="row">Automated checks</th><td>The 9 October release record reports 230 passing checks. Source includes scheduling, booking-selection and database regression checks.</td><td>Historical release evidence. A separate fresh check on 27 October passed 14 tests in two scheduling-domain suites. The complete 230-check release suite was not rerun; these are distinct checks.</td></tr><tr><th scope="row">Signed-in journeys</th><td>Developed learner, instructor and administration workflows.</td><td>Complete deployed journeys and resulting records still need owner acceptance.</td></tr><tr><th scope="row">Notification delivery</th><td>Outbox and sender foundations; the release record distinguishes provider acceptance from actual inbox receipt.</td><td>Actual receipt, consent behaviour and timed reminders require separate verification.</td></tr><tr><th scope="row">Business improvement</th><td>No recorded before/after measurement is claimed in this case.</td><td>Measure task completion, manual effort or rework against an agreed baseline before reporting an improvement.</td></tr></tbody></table></div><div class="case-callout"><strong>Next acceptance milestone</strong><p>Follow one approved, isolated learner-to-booking journey through confirmation, a change or cancellation, and actual test-recipient notification receipt. Record the observed outcome at each step.</p></div><a class="evidence-link" href="https://fuziondrivingschool.com.au/" target="_blank" rel="noopener noreferrer">Explore the live public website <span aria-hidden="true">↗</span></a></section>
+        <section id="scope"><h2>A public website and a clearly scoped platform case.</h2><p>The public website is live. Signed-in operational acceptance remains a separate milestone. Automatic Google Calendar synchronisation is not connected; manual calendar links and downloads have different behaviour. Live card-payment acceptance is not claimed here.</p><p>The application source remains private. This case uses the public homepage, original conceptual diagrams and implementation summaries, with no learner records, staff workspaces, credentials or deployment identifiers.</p></section>
+      </div>
+    </div>
+    <section class="next-case"><div class="wrap next-case-inner"><div><span>Continue exploring</span><h2>Make the detail behind the dashboard visible.</h2></div><a class="text-link" href="data-workbench.html">Data Workbench <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#work">Back to selected work <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

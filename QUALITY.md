@@ -24,7 +24,7 @@ These checks require browser inspection. A successful data test command does not
 
 - The collection contains sixteen project entries, with three selected evidence cards and six professional-practice areas. Hosting entries, editorial workstreams, application versions and individual test suites are not counted as separate delivered projects.
 - Confirm the new mobile filter, reset/search behaviour and count across the compact additions, detailed cases and supporting collection. Keep all three project collections keyboard reachable and narrow-screen readable.
-- Scan visible copy, hidden search terms, page metadata, links, asset paths and original images for client identifiers. Commercial cases use generic titles and original diagrams. My own projects retain their names. Do not publish client screenshots, private source or operational records.
+- Scan visible copy, hidden search terms, page metadata, links, asset paths and original images for client identifiers. Fuzion Driving School is the named exception, retaining its public website link, public homepage capture and original architecture diagrams. Other commercial cases use generic titles and original diagrams. My own projects retain their names. Do not publish other client screenshots, private source or operational records.
 - Keep SlingBurst's 23 September 2026 signed Android candidate and 188 checks explicitly dated. Device acceptance, final package/certificate inspection and Google Play publication remain separate.
 - Keep Purano Maidan's 28 August 2026 app UAT and separate API suite distinct; do not automatically add the counts. Preview pages do not establish accepted merchant, notification or production workflows.
 - The anonymous commerce-pricing case describes installed staging theme/plugin work and a no-payment quote journey. A paused price feed, draft catalogue and pending owner acceptance must not become a live-commerce claim.
@@ -162,9 +162,9 @@ The paired [Commercial Product Websites case](dist/cases/commercial-product-webs
 
 Review the case's navigation, diagram readability and mobile layout. Retain delivery/contribution evidence privately, separate from the public repository. Do not infer custom plugin development, search ranking, conversion improvements, accessibility certification or business results without corresponding evidence.
 
-## Anonymous service-booking platform
+## Named Fuzion Driving School case and anonymous compatibility page
 
-The [Service Booking Platform case](dist/cases/service-booking-platform.html) distinguishes public website delivery from acceptance of protected customer/operator workflows, message receipt, timed reminders or live card payments. Client identity and direct URL are withheld; private source stays private. Public visuals explain scheduling and role boundaries using fictional labels.
+The [Fuzion Driving School case](dist/cases/fuzion-driving-platform.html) retains its original named public website link, homepage capture and architecture diagrams. It distinguishes public website delivery from acceptance of protected customer/operator workflows, message receipt, timed reminders or live card payments. Private source and operational records stay private. The earlier anonymous [Service Booking Platform page](dist/cases/service-booking-platform.html) remains available as an unlinked compatibility case.
 
 Keep these test records separate:
 
