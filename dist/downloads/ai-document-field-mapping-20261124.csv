@@ -1,0 +1,9 @@
+﻿author,classification,source_label,target_field,illustrative_review_rule
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Order number,purchase_order_id,Required and unique within the controlled batch
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Supplier reference,supplier_reference,Confirm against approved supplier master
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Job reference,job_reference,Confirm approved job mapping
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Service description,lines[].description,Review ambiguous or incomplete text
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Quantity,lines[].quantity,Numeric and greater than zero
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Unit price,lines[].unit_price,Numeric decimal; compare ambiguous capture with source
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Line amount,lines[].line_amount,Recalculate quantity × unit price
+Dhruba Poudel,FICTIONAL_EDUCATIONAL_EXAMPLE,Document total,total,Reconcile supplied subtotal and tax amount

@@ -1,0 +1,32 @@
+WEB SECURITY & RELEASE ENGINEERING
+Prepared by: Dhruba Poudel
+Case: Purano Maidan — sports booking and community platform
+Publication summary prepared: 24 November 2026
+Release verification record: 21 November 2026
+
+I developed the platform's role-aware booking and community workflows and followed the implementation into a controlled dependency-update release. The release process connected repeatable builds, regression checks, hosting verification and a retained rollback option.
+
+CHECKPOINT                         RECORDED EVIDENCE
+Dependency install                 Locked/frozen installation completed.
+Application build                  Clean hosting build completed.
+Regression checks                  Recorded application/build test checks passed.
+Hosting adaptation                 Hosting-adapter smoke checks passed.
+Public route verification          Homepage, help centre and direct venue route/refresh exercised.
+Public service check               Health response and public directory API exercised.
+Identity boundary                  Sign-in/reset screens exercised; unauthenticated administrator requests rejected.
+Rollback preparation               Previous successful deployment retained.
+
+DELIVERY STAGE AND ACCEPTANCE
+The public platform remains a preview/controlled beta. The 21 November record verifies a maintenance release within the scope above. It does not replace full end-to-end acceptance of real customer transactions.
+
+The release record leaves these checks for separate acceptance:
+• Real email delivery.
+• Authenticated transactions.
+• Backup restoration.
+
+Earlier product verification is a separate dated record: 97 application checks and a separate 33-check core API suite on 28 August 2026. These totals are kept distinct and are not presented as newly executed tests.
+
+The case demonstrates controlled maintenance and release engineering: make the change, repeat the checks, verify the hosted surface and keep a recovery option available.
+
+Portfolio case: https://about.dhrub.com.np/cases/purano-maidan.html
+Author / Creator / Last Modified By: Dhruba Poudel

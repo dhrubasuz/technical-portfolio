@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="An anonymous enterprise identity case by Dhruba Poudel: Microsoft Entra ID SSO requirements, identity mapping, provider coordination and own-account sign-in validation.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Enterprise Identity &amp; SSO Integration — Dhruba Poudel">
+  <meta property="og:description" content="Connect identity requirements with a tested sign-in. An anonymous case covering federation hand-offs, user-identifier mapping and provider coordination.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/cases/identity-sso-integration.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/identity-sso-20261124.png">
+  <meta property="og:image:alt" content="Original high-level identity and SSO integration diagram by Dhruba Poudel">
+  <link rel="canonical" href="https://about.dhrub.com.np/cases/identity-sso-integration.html">
+  <title>Enterprise Identity &amp; SSO Integration — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <link rel="stylesheet" href="../assets/broader-work.css?v=20261029">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+  <style>
+    .sso-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:32px 0 0; border-top:1px solid var(--line); padding-top:24px; }
+    .sso-facts dt { color:var(--teal-dark); font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .sso-facts dd { margin:8px 0 0; color:var(--muted); font-size:.82rem; line-height:1.7; }
+    .sso-flow { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; padding:0; margin:26px 0; list-style:none; }
+    .sso-flow li { margin:0; padding:21px; border:1px solid var(--line); background:var(--white); border-radius:4px; }
+    .sso-flow span { display:block; margin-bottom:10px; color:var(--teal-dark); font-size:.65rem; font-weight:700; letter-spacing:.08em; }
+    .sso-flow strong { display:block; font-size:.88rem; line-height:1.45; }
+    .sso-flow p { margin:10px 0 0; font-size:.77rem; line-height:1.7; }
+    .sso-callout { margin:26px 0; padding:22px 24px; border-left:3px solid var(--teal); background:var(--mint); }
+    .sso-callout h3 { margin:0 0 9px; font-size:.95rem; }
+    .sso-callout p { margin:0; }
+    .sso-table-wrap { overflow-x:auto; margin:24px 0; border:1px solid var(--line); border-radius:4px; }
+    .sso-table-wrap:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+    .sso-table { width:100%; min-width:590px; border-collapse:collapse; font-size:.79rem; line-height:1.7; }
+    .sso-table caption { padding:18px; text-align:left; font-weight:700; color:var(--ink); background:var(--mint); }
+    .sso-table th,.sso-table td { padding:17px 18px; text-align:left; vertical-align:top; border-top:1px solid var(--line); }
+    .sso-table thead th { font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; }
+    .sso-table tbody th { width:26%; font-weight:700; }
+    .sso-table td { color:var(--muted); }
+    .sso-stage { display:block; margin-top:6px; color:var(--teal-dark); font-weight:700; font-size:.7rem; }
+    .sso-caption { max-width:830px; }
+    .sso-download { margin-top:20px; }
+    @media(max-width:700px) { .sso-facts,.sso-flow { grid-template-columns:1fr; gap:15px; } .sso-flow li { padding:20px; } .sso-callout { padding:20px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+        <a href="../index.html#delivery-evidence">Delivery evidence</a><a href="../index.html#work">Selected work</a><a href="../index.html#areas">Work areas</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#delivery-evidence"><span aria-hidden="true">←</span> All delivery evidence</a>
+      <div class="case-hero-grid">
+        <div>
+          <p class="eyebrow">Anonymous enterprise case · Identity integration</p>
+          <h1>Enterprise identity<br>&amp; SSO integration</h1>
+          <p class="case-lead">Connect the requirements.<br>Validate the sign-in.</p>
+          <div class="case-links"><a class="button" href="#evidence">Inspect the evidence <span aria-hidden="true">↓</span></a><a class="text-link" href="../downloads/identity-sso-acceptance-criteria.txt" download>Acceptance criteria (TXT) <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <dl class="case-meta">
+          <div><dt>My role</dt><dd>Technical requirements · Identity mapping · Provider coordination · User-level validation</dd></div>
+          <div><dt>Technology</dt><dd>Microsoft Entra ID · Application SSO · Federation metadata</dd></div>
+          <div><dt>Validated scope</dt><dd>Successful sign-in for my own account · September 2026</dd></div>
+          <div><dt>Publication</dt><dd>Application and client identity withheld</dd></div>
+        </dl>
+      </div>
+      <dl class="sso-facts">
+        <div><dt>The problem</dt><dd>Providers need a consistent view of application identity, federation requirements and the acceptance step.</dd></div>
+        <div><dt>My contribution</dt><dd>Clarify the hand-offs, align identifier requirements and follow the integration through user-level testing.</dd></div>
+        <div><dt>Delivery boundary</dt><dd>Own-account validation is evidenced. Wider user rollout has a separate acceptance milestone.</dd></div>
+      </dl>
+    </section>
+    <div class="wrap">
+      <figure class="project-screenshot">
+        <a href="../assets/identity-sso-20261124.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the full original high-level SSO diagram"><img src="../assets/identity-sso-20261124.png" alt="Generic flow from user sign-in requirements through Microsoft Entra ID federation hand-off to business-application identity mapping and own-account validation." width="1200" height="675"></a>
+        <figcaption><span class="sso-caption">Original high-level diagram. It illustrates the integration contribution without reproducing authentication settings or client records.</span><span>Dhruba Poudel</span></figcaption>
+      </figure>
+    </div>
+    <div class="wrap case-body">
+      <nav class="case-index" aria-label="Case study sections">
+        <h2>Inside the project</h2>
+        <ol><li><a href="#problem">01 · The problem</a></li><li><a href="#contribution">02 · My contribution</a></li><li><a href="#workflow">03 · Technical workflow</a></li><li><a href="#evidence">04 · Evidence &amp; acceptance</a></li><li><a href="#stage">05 · Current stage</a></li></ol>
+      </nav>
+      <div class="case-content">
+        <section id="problem">
+          <h2>A sign-in integration needs a shared technical contract.</h2>
+          <p>Single sign-on connects an identity provider, an application and the people responsible for each. Progress depends on the right configuration requirements reaching the right provider, with a consistent application-side identity and a clear way to verify the result.</p>
+          <p>I worked across the managed-service and application-provider hand-offs to turn those dependencies into actionable requirements and user-level sign-in checks.</p>
+        </section>
+        <section id="contribution">
+          <h2>Translate configuration dependencies into delivery actions.</h2>
+          <p>My contribution covered Microsoft Entra ID–application SSO requirements, federation metadata exchange and email-based user-identifier alignment. I coordinated the information providers needed, clarified ownership of the next configuration step and followed up the sign-in result.</p>
+          <ul><li>Identify the identity-provider and service-provider hand-off requirements.</li><li>Clarify federation metadata and user-identifier mapping dependencies.</li><li>Coordinate managed-service and application-provider actions.</li><li>Validate access for my own account and raise the next user-enablement steps.</li></ul>
+          <p>The case demonstrates technical business analysis, integration coordination and user-level validation alongside provider-managed configuration.</p>
+          <ul class="tags" aria-label="Project skills"><li>Microsoft Entra ID</li><li>Single sign-on</li><li>Systems integration</li><li>Requirements analysis</li><li>User acceptance testing</li><li>Provider coordination</li></ul>
+        </section>
+        <section id="workflow">
+          <h2>Requirements, mapping, then a concrete sign-in check.</h2>
+          <ol class="sso-flow" aria-label="High-level integration workflow">
+            <li><span>01 · DEFINE</span><strong>Agree the hand-off</strong><p>Connect application requirements with identity-provider and service-provider configuration dependencies.</p></li>
+            <li><span>02 · ALIGN</span><strong>Resolve identity mapping</strong><p>Confirm the agreed identifier format and the matching application-side user identity with the responsible providers.</p></li>
+            <li><span>03 · VALIDATE</span><strong>Check the user journey</strong><p>Test sign-in for the defined account, record the outcome and keep further user enablement behind its acceptance step.</p></li>
+          </ol>
+          <p>This diagram and workflow are a public abstraction of my contribution. They contain no tenant identifiers, certificates, authentication metadata or live configuration.</p>
+        </section>
+        <section id="evidence">
+          <h2>Separate retained evidence from illustrative acceptance criteria.</h2>
+          <p>The retained September correspondence supports both the coordination work and a successful sign-in reported for my own account. The broader acceptance examples below explain how the integration can be reviewed; they are illustrative criteria, not additional executed tests.</p>
+          <div class="sso-table-wrap" tabindex="0" role="region" aria-label="Retained evidence table; scroll horizontally on small screens">
+            <table class="sso-table">
+              <caption>Actual retained evidence · September 2026</caption>
+              <thead><tr><th scope="col">Item</th><th scope="col">Supported contribution or result</th><th scope="col">Scope</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Provider hand-off requirements</th><td>Authored correspondence coordinates federation metadata and user-identifier requirements between the responsible providers.</td><td>Requirements and coordination evidenced.</td></tr>
+                <tr><th scope="row">Own-account SSO sign-in</th><td>I reported successful SSO sign-in and requested the next steps for additional users.</td><td>One account validated.<span class="sso-stage">Wider rollout separately gated</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="sso-table-wrap" tabindex="0" role="region" aria-label="Illustrative acceptance criteria table; scroll horizontally on small screens">
+            <table class="sso-table">
+              <caption>Illustrative acceptance criteria · No additional executed-test claim</caption>
+              <thead><tr><th scope="col">Example check</th><th scope="col">Acceptance criterion</th><th scope="col">Evidence status</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Matching identity</th><td>The application-side identity matches the identifier format agreed with the identity provider.</td><td>Illustrative criterion.</td></tr>
+                <tr><th scope="row">Mapping discrepancy</th><td>Resolve an unmatched identifier before accepting the user-enablement step.</td><td>Illustrative criterion.</td></tr>
+                <tr><th scope="row">Wider user enablement</th><td>Confirm intended user coverage and obtain the responsible owner’s acceptance.</td><td>Illustrative criterion; rollout outcome unverified.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="sso-download"><a class="text-link" href="../downloads/identity-sso-acceptance-criteria.txt" download>Download the evidence and illustrative criteria (TXT) <span aria-hidden="true">↓</span></a></p>
+        </section>
+        <section id="stage">
+          <h2>Own-account validation, with a clear next acceptance step.</h2>
+          <p>Successful sign-in for my own account was recorded in September 2026. The case establishes my requirements, identity-mapping and provider-coordination contribution, followed by that user-level validation.</p>
+          <div class="sso-callout"><h3>Wider rollout remains separately verified.</h3><p>The retained evidence does not establish successful enablement for every intended user. Wider rollout and its owner acceptance remain separate from the sign-in result shown here.</p></div>
+          <p>Client and application identities are withheld. The public illustration and criteria retain the technical decisions and delivery boundaries while keeping operational authentication material private.</p>
+        </section>
+      </div>
+    </div>
+    <section class="next-case"><div class="wrap next-case-inner"><div><span>Continue exploring</span><h2>More of the work behind dependable systems.</h2></div><a class="text-link" href="../index.html#delivery-evidence">Explore delivery evidence <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#delivery-evidence">Back to delivery evidence <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "author": "Dhruba Poudel",
+  "creator": "Dhruba Poudel",
+  "lastModifiedBy": "Dhruba Poudel",
+  "classification": "FICTIONAL_EDUCATIONAL_EXAMPLE",
+  "purchase_order_id": "EXAMPLE-PO-001",
+  "currency": "AUD",
+  "lines": [
+    {
+      "description": "Fictional service visit",
+      "quantity": "2",
+      "unit_price": "120.00",
+      "line_amount": "240.00"
+    },
+    {
+      "description": "Fictional consumable pack",
+      "quantity": "3",
+      "unit_price": "20.00",
+      "line_amount": "60.00"
+    }
+  ],
+  "subtotal": "300.00",
+  "tax_amount": "30.00",
+  "total": "330.00",
+  "reviewRecord": {
+    "sourceValue": "120.00",
+    "capturedValue": "12O.OO",
+    "reviewedValue": "120.00",
+    "reason": "Source comparison resolves letter-O capture ambiguity.",
+    "status": "ILLUSTRATIVE_REVIEW_COMPLETED",
+    "downstreamSubmission": "NOT_EXECUTED"
+  }
+}

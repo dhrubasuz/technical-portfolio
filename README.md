@@ -57,6 +57,19 @@ I develop full-stack web applications, cross-platform mobile/game software, cust
 
 These capabilities match my LinkedIn About and Skills sections. Individual case studies describe the contribution and delivery stage for that project.
 
+## Enterprise delivery evidence
+
+Four focused case-study additions connect professional contribution with public, sanitised proof. These are separate from the sixteen-product collection.
+
+| Case | Evidence and stage |
+| --- | --- |
+| [Enterprise Identity & SSO Integration](dist/cases/identity-sso-integration.html) | Federation requirements, identity mapping and provider coordination; own-account sign-in validated in September 2026. Illustrative acceptance criteria are labelled separately; wider rollout remains a separate acceptance step. |
+| [AI Document Capture & Validation](dist/cases/ai-document-capture.html) | Zudello input-template and field-mapping configuration and workflow demonstration. Public PO/capture/review examples are fictional; the timing log contains zero measured pairs. |
+| [Supplier Compliance Integration](dist/cases/supplier-compliance-integration.html) | Onboarding requirements, compliance-status mapping and UAT. The retained October 2026 record supports tested/UAT status; the public acceptance examples are fictional. |
+| [Web Security & Release Engineering](dist/cases/purano-maidan.html#release-evidence) | Dated 21 November maintenance release, dependency/build/regression/hosting checks, public routes and sign-in boundary checks, with previous deployment retained for rollback. Product stage remains preview/controlled beta. |
+
+The public examples and diagrams are authored by Dhruba Poudel. No private employer records, tenant identifiers, certificates, client data or operational configuration are included.
+
 ## Run the portfolio locally
 
 The website uses HTML, CSS and vanilla JavaScript. There is no package installation or build step. Serve `dist/` through a static HTTP server so both demonstrations' ES modules load correctly.

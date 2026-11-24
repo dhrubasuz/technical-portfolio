@@ -1,0 +1,35 @@
+{
+  "author": "Dhruba Poudel",
+  "creator": "Dhruba Poudel",
+  "lastModifiedBy": "Dhruba Poudel",
+  "classification": "FICTIONAL_ACCEPTANCE_DESIGN",
+  "productionStatus": "October 2026 evidence records tested/UAT. Current production rollout unverified.",
+  "cases": [
+    {
+      "case": "SC-01",
+      "fictionalInput": "Supplier status returned as current/compliant",
+      "proposedExpectedHandling": "Map to the agreed compliance label and show source/as-of information for reviewer acceptance."
+    },
+    {
+      "case": "SC-02",
+      "fictionalInput": "Supplier status returned as non-compliant",
+      "proposedExpectedHandling": "Surface the status in the review workflow; a responsible reviewer applies the agreed onboarding policy."
+    },
+    {
+      "case": "SC-03",
+      "fictionalInput": "Supplier lookup has no match",
+      "proposedExpectedHandling": "Show an unmapped exception for review; do not silently treat an unmatched record as compliant."
+    },
+    {
+      "case": "SC-04",
+      "fictionalInput": "Status lookup unavailable or dated snapshot outside agreed freshness window",
+      "proposedExpectedHandling": "Show unavailable/stale status for review and retain the last-known source timestamp."
+    },
+    {
+      "case": "SC-05",
+      "fictionalInput": "Two source records match the same supplier reference",
+      "proposedExpectedHandling": "Hold the ambiguous mapping for investigation before applying a status."
+    }
+  ],
+  "scope": "These generic cases demonstrate acceptance thinking. They are not a disclosure of live SKG rules or results and have not been executed against production."
+}

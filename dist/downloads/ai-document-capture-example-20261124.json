@@ -1,0 +1,84 @@
+{
+  "author": "Dhruba Poudel",
+  "creator": "Dhruba Poudel",
+  "lastModifiedBy": "Dhruba Poudel",
+  "classification": "FICTIONAL_EDUCATIONAL_EXAMPLE",
+  "purpose": "Explain input-template mapping, field validation and human correction; this file is not a Zudello extraction result.",
+  "sourceDocument": {
+    "orderNumber": "EXAMPLE-PO-001",
+    "supplierReference": "SUPPLIER-DEMO-01",
+    "jobReference": "JOB-DEMO-01",
+    "currency": "AUD",
+    "lines": [
+      {
+        "description": "Fictional service visit",
+        "quantity": "2",
+        "unitPrice": "120.00",
+        "lineAmount": "240.00"
+      },
+      {
+        "description": "Fictional consumable pack",
+        "quantity": "3",
+        "unitPrice": "20.00",
+        "lineAmount": "60.00"
+      }
+    ],
+    "subtotal": "300.00",
+    "taxAmount": "30.00",
+    "total": "330.00"
+  },
+  "illustrativeCapturedFields": {
+    "purchase_order_id": "EXAMPLE-PO-001",
+    "supplier_reference": "SUPPLIER-DEMO-01",
+    "job_reference": "JOB-DEMO-01",
+    "currency": "AUD",
+    "lines": [
+      {
+        "description": "Fictional service visit",
+        "quantity": "2",
+        "unit_price": "12O.OO",
+        "line_amount": "240.00"
+      },
+      {
+        "description": "Fictional consumable pack",
+        "quantity": "3",
+        "unit_price": "20.00",
+        "line_amount": "60.00"
+      }
+    ],
+    "subtotal": "300.00",
+    "tax_amount": "30.00",
+    "total": "330.00"
+  },
+  "illustrativeChecks": [
+    {
+      "field": "purchase_order_id",
+      "check": "Required identifier present",
+      "result": "PASS"
+    },
+    {
+      "field": "lines[0].unit_price",
+      "check": "Numeric decimal required",
+      "result": "HOLD",
+      "reason": "Letter O in captured value; reviewer must compare source."
+    },
+    {
+      "field": "lines[0].line_amount",
+      "check": "quantity × unit_price",
+      "result": "PENDING",
+      "reason": "Cannot calculate until captured unit price is reviewed."
+    },
+    {
+      "field": "total",
+      "check": "subtotal + supplied tax amount",
+      "result": "PASS"
+    },
+    {
+      "field": "supplier_reference",
+      "check": "Approved supplier mapping",
+      "result": "REVIEW",
+      "reason": "Illustrative reference; real approval comes from the owning system."
+    }
+  ],
+  "reviewGate": "A reviewer compares the captured field with the source and records the correction before downstream preparation."
+}

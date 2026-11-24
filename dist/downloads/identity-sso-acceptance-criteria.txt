@@ -1,0 +1,24 @@
+Enterprise Identity & SSO Integration — Evidence and Illustrative Acceptance Criteria
+Author: Dhruba Poudel
+
+Actual retained evidence and illustrative checks are explicitly separated.
+
+Actual retained evidence | Own-account SSO sign-in
+Result/criterion: Successful sign-in reported by Dhruba in an outgoing September 2026 email
+Status: Validated for own account
+
+Actual retained evidence | Provider hand-off requirements
+Result/criterion: Federation metadata and user-identifier requirements coordinated in authored correspondence
+Status: Requirements and coordination evidenced
+
+Illustrative acceptance criterion | Matching user identity
+Result/criterion: Application identity matches the agreed identity-provider identifier
+Status: Illustrative; not an additional executed test
+
+Illustrative acceptance criterion | Unmatched application identity
+Result/criterion: Resolve the mapping discrepancy before accepting the user-enablement step
+Status: Illustrative; not an additional executed test
+
+Illustrative acceptance criterion | Wider user enablement
+Result/criterion: Confirm intended user coverage and obtain the responsible owner’s acceptance
+Status: Illustrative; rollout outcome not verified

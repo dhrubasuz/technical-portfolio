@@ -1,0 +1,10 @@
+AI document review measurement
+Prepared by Dhruba Poudel
+
+Status: no observed timing pairs recorded.
+
+Use comparable source batches with the same document and line-item counts and equivalent complexity. Record manual entry, review and correction separately. For the capture workflow, include template/setup allocation, processing, review and correction. Record both active staff time and any material elapsed waiting time in notes. Reconcile outputs before accepting a pair.
+
+Accepted pair: same source scope, equivalent review/correction coverage and reconciled output. A missing duration is blank, not zero. Keep customer names, financial amounts and source documents out of any public copy.
+
+After collecting accepted pairs, compare total manual active time with total capture-assisted active time and report the sample size, workflow version and measurement period. Do not publish a percentage from this empty template or from fictional examples.

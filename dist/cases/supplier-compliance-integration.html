@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="Dhruba Poudel’s supplier-compliance integration contribution: CM3-to-SKGenius requirements and UAT, with fictional status-mapping acceptance cases and an explicit delivery stage.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Supplier Compliance Integration — Dhruba Poudel">
+  <meta property="og:description" content="Dhruba Poudel’s supplier-compliance integration contribution: CM3-to-SKGenius requirements and UAT, with fictional status-mapping acceptance cases and an explicit delivery stage.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/cases/supplier-compliance-integration.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/supplier-compliance-20261124.png">
+  <meta property="og:image:alt" content="Supplier Compliance Integration: original conceptual workflow by Dhruba Poudel">
+  <link rel="canonical" href="https://about.dhrub.com.np/cases/supplier-compliance-integration.html">
+  <title>Supplier Compliance Integration — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <link rel="stylesheet" href="../assets/broader-work.css?v=20261029">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+  <style>
+    .delivery-case .case-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:32px 0 0; padding-top:24px; border-top:1px solid var(--line); }
+    .delivery-case .case-summary dt { color:var(--teal-dark); font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+    .delivery-case .case-summary dd { margin:8px 0 0; color:var(--muted); font-size:.82rem; line-height:1.7; }
+    .delivery-case .case-content h3 { font-size:1.16rem; line-height:1.35; margin:26px 0 12px; }
+    .delivery-case .case-content p,.delivery-case .case-content li { overflow-wrap:break-word; }
+    .delivery-case .case-content li+li { margin-top:9px; }
+    .delivery-case .case-note { margin:24px 0; padding:22px 24px; background:#e5efec; border-left:3px solid var(--teal); }
+    .delivery-case .case-note strong { display:block; font-size:.84rem; margin-bottom:8px; }
+    .delivery-case .case-note p { font-size:.81rem; margin:0; }
+    .delivery-case .case-table-scroll { overflow-x:auto; margin:23px 0; border:1px solid var(--line); border-radius:4px; }
+    .delivery-case .case-table-scroll:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+    .delivery-case .case-table { width:100%; min-width:610px; border-collapse:collapse; font-size:.78rem; line-height:1.65; }
+    .delivery-case .case-table caption { padding:16px 18px; text-align:left; font-weight:700; color:var(--ink); background:#e9efea; }
+    .delivery-case .case-table th,.delivery-case .case-table td { text-align:left; vertical-align:top; padding:15px 17px; border-top:1px solid var(--line); }
+    .delivery-case .case-table thead th { font-size:.65rem; letter-spacing:.05em; text-transform:uppercase; }
+    .delivery-case .case-table tbody th { font-weight:600; width:25%; }
+    .delivery-case .case-table td { color:var(--muted); }
+    .delivery-case .case-table code { white-space:nowrap; }
+    .delivery-case .case-data-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:24px 0; }
+    .delivery-case .case-data-panel { min-width:0; padding:22px; border:1px solid var(--line); background:var(--white); border-radius:4px; }
+    .delivery-case .case-data-panel h3 { margin:0 0 14px; font-size:1rem; }
+    .delivery-case .case-data-panel dl { margin:0; }
+    .delivery-case .case-data-panel dl div { display:grid; grid-template-columns:1fr 1fr; gap:12px; padding:9px 0; border-top:1px solid var(--line); font-size:.76rem; }
+    .delivery-case .case-data-panel dt { color:var(--muted); }
+    .delivery-case .case-data-panel dd { margin:0; overflow-wrap:anywhere; }
+    .delivery-case .case-code { max-width:100%; padding:22px; background:#edf0e8; border:1px solid var(--line); font-size:.76rem; line-height:1.8; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .delivery-case .case-code code { padding:0; background:transparent; font-size:inherit; }
+    .delivery-case .case-downloads { list-style:none; padding:0; margin:20px 0 0; border-top:1px solid var(--line); }
+    .delivery-case .case-downloads li { border-bottom:1px solid var(--line); margin:0!important; }
+    .delivery-case .case-downloads a { display:block; padding:15px 0; font-size:.8rem; color:var(--teal-dark); overflow-wrap:anywhere; }
+    .delivery-case .case-downloads small { display:block; margin-top:4px; color:var(--muted); font-size:.71rem; }
+    .delivery-case .case-record { margin:24px 0; border-top:1px solid var(--line); }
+    .delivery-case .case-record div { display:grid; grid-template-columns:145px 1fr; gap:24px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .delivery-case .case-record dt { font-size:.78rem; font-weight:700; }
+    .delivery-case .case-record dd { margin:0; color:var(--muted); font-size:.82rem; line-height:1.75; }
+    .delivery-case .case-stage { margin-top:24px; color:var(--muted); font-size:.76rem; }
+    @media(max-width:700px) { .delivery-case .case-summary,.delivery-case .case-data-grid { grid-template-columns:1fr; gap:18px; } .delivery-case .case-record div { grid-template-columns:1fr; gap:5px; } .delivery-case .case-data-panel { padding:19px; } .delivery-case .case-note { padding:19px 20px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
+</head>
+<body class="delivery-case">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button><nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation"><a href="../index.html#delivery-evidence">Delivery evidence</a><a href="../index.html#work">Selected work</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a></nav></div></header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#delivery-evidence"><span aria-hidden="true">←</span> Delivery evidence</a>
+      <div class="case-hero-grid"><div><p class="eyebrow">Business systems · Integration and UAT</p><h1>Supplier compliance integration</h1><p class="case-lead">Bring compliance information into the onboarding and company-record workflows where it needs to be reviewed.</p><div class="case-links"><a class="button" href="#acceptance">Explore acceptance cases <span aria-hidden="true">↓</span></a><a class="text-link" href="#stage">Delivery evidence <span aria-hidden="true">↓</span></a></div></div><dl class="case-meta"><div><dt>My role</dt><dd>Roadmap coordination · Integration requirements · Testing follow-up</dd></div><div><dt>Context</dt><dd>CM3 and SKGenius supplier records</dd></div><div><dt>Last verified stage</dt><dd>Tested and in final-release UAT, October 2026</dd></div><div><dt>Current rollout</dt><dd>Production release awaiting verification</dd></div></dl></div>
+      <dl class="case-summary"><div><dt>Business task</dt><dd>Improve visibility of supplier compliance information across onboarding and company records.</dd></div><div><dt>Integration focus</dt><dd>Source references, status mapping, exception visibility and expected review behaviour.</dd></div><div><dt>Public proof</dt><dd>Five fictional acceptance-design cases. They are illustrations, not production test results.</dd></div></dl>
+    </section>
+    <div class="wrap"><figure class="project-screenshot"><img src="../assets/supplier-compliance-20261124.png" alt="Original conceptual flow: compliance source status maps to company records and is reviewed in onboarding. October 2026 evidence records testing and UAT; production rollout is unverified." width="1200" height="675"><figcaption><span>Original high-level integration overview, with no supplier identities or operational records.</span><span>Dhruba Poudel</span></figcaption></figure></div>
+    <div class="wrap case-body"><nav class="case-index" aria-label="Case study sections"><h2>Inside the case</h2><ol><li><a href="#contribution">01 · My contribution</a></li><li><a href="#mapping">02 · Mapping and review</a></li><li><a href="#acceptance">03 · Acceptance cases</a></li><li><a href="#stage">04 · Delivery evidence</a></li><li><a href="#downloads">05 · Download examples</a></li></ol></nav><div class="case-content">
+      <section id="contribution"><h2>Connect a compliance requirement with the operational workflow.</h2><p>My SKGenius work includes maintaining integration priorities and coordinating requirements, developers, stakeholders and testing. For supplier compliance, the roadmap covers CM3 integration and validation in service-provider onboarding, company records and company details.</p><p>The documented goal is to make compliance information easier to review within SKGenius and reduce reliance on separate manual checking. The retained October 2026 update records that the integration had been tested and was in UAT for its final release.</p><p>This case focuses on application integration and acceptance. Monthly compliance dashboards and board reporting are separate reporting deliverables.</p></section>
+      <section id="mapping"><h2>Make the source status and the matching record clear.</h2><p>A useful integration must connect a source reference with the intended company record, map the returned status to agreed labels and expose records that need attention. A missing lookup, ambiguous match or stale result must remain understandable to the reviewer.</p><p>The public diagram explains these decisions at a generic level. It does not reproduce private fields, live API contracts, supplier identities or internal eligibility rules.</p><div class="case-note"><strong>Illustrative acceptance design</strong><p>The examples below are newly created fictional cases showing how I reason about status mapping and review. They are not live SKG rules and have not been executed against production.</p></div></section>
+      <section id="acceptance"><h2>Define expected behaviour for ordinary and uncertain results.</h2><div class="case-table-scroll" role="region" aria-label="Scrollable fictional supplier-compliance acceptance cases" tabindex="0"><table class="case-table"><caption>Five fictional acceptance-design cases</caption><thead><tr><th scope="col">Input condition</th><th scope="col">Expected handling to agree and test</th><th scope="col">Review evidence</th></tr></thead><tbody><tr><th scope="row">SC-01 · Current compliant status</th><td>Map the returned value to the agreed compliance label.</td><td>Matched source reference and source/as-of information remain visible for acceptance.</td></tr><tr><th scope="row">SC-02 · Non-compliant status</th><td>Surface the status in the review workflow. The responsible reviewer applies the agreed onboarding policy.</td><td>The integration result and the separate review decision remain distinguishable.</td></tr><tr><th scope="row">SC-03 · No matching supplier</th><td>Create an unmapped exception for investigation.</td><td>An unmatched record is not silently treated as compliant.</td></tr><tr><th scope="row">SC-04 · Unavailable or stale result</th><td>Show unavailable/stale status using an agreed freshness rule.</td><td>Retain the last-known source timestamp and indicate that a current result is pending.</td></tr><tr><th scope="row">SC-05 · Ambiguous duplicate match</th><td>Hold the mapping for review before applying a status.</td><td>Show the ambiguity and the reason for the eventual mapping decision.</td></tr></tbody></table></div><p>These cases are intended to support an acceptance discussion: what should the integration return, what should the interface show, and what action belongs to the reviewer? They do not make automated eligibility decisions.</p></section>
+      <section id="stage"><h2>Keep testing evidence separate from rollout status.</h2><dl class="case-record"><div><dt>Recorded scope</dt><dd>CM3 integration and testing, including validation in supplier onboarding and company-record views.</dd></div><div><dt>October 2026 record</dt><dd>The integration was described as tested and in UAT for final release.</dd></div><div><dt>Current production status</dt><dd>No newer release-acceptance confirmation was located in this review. Production rollout remains awaiting verification.</dd></div><div><dt>Public examples</dt><dd>The five cases above are fictional acceptance-design examples, with no live supplier records or production results.</dd></div></dl><p>A future update can attach the accepted release scope, an anonymised result summary and the agreed operating handover once those are verified. This page records the contribution and the delivery stage supported by the available evidence.</p></section>
+      <section id="downloads"><h2>Review the acceptance examples.</h2><ul class="case-downloads"><li><a href="../downloads/supplier-compliance-acceptance-examples-20261124.json" download>Five fictional acceptance-design cases <small>JSON · Expected handling, review scope and delivery-stage note</small></a></li><li><a href="../assets/supplier-compliance-20261124.svg" download>Original high-level integration diagram <small>SVG · Dhruba Poudel</small></a></li></ul><ul class="tags" aria-label="Case skills" style="margin-top:26px"><li>Systems integration</li><li>Requirements analysis</li><li>Data mapping</li><li>User acceptance testing</li><li>Exception review</li><li>Stakeholder coordination</li></ul></section>
+    </div></div>
+    <section class="next-case"><div class="wrap next-case-inner"><div><span>Continue exploring</span><h2>More of the work behind the workflow.</h2></div><a class="text-link" href="ai-document-capture.html">AI document capture <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#delivery-evidence">Back to delivery evidence <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>
