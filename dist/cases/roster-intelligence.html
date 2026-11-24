@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Dhruba Poudel">
+  <meta name="creator" content="Dhruba Poudel">
+  <meta name="last-modified-by" content="Dhruba Poudel">
+  <meta name="description" content="Dhruba Poudel’s SKGenius roster-intelligence requirements, interface design and integration handoff. In-development case with fictional coverage examples.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta property="og:title" content="Roster Intelligence — Dhruba Poudel">
+  <meta property="og:description" content="Coverage, hours variance and clear next actions. A roster-intelligence design case, with an explicit UAT-development stage.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://about.dhrub.com.np/cases/roster-intelligence.html">
+  <meta property="og:image" content="https://about.dhrub.com.np/assets/roster-intelligence-20261124.png">
+  <meta property="og:image:alt" content="Original roster-intelligence diagram with fictional site hours by Dhruba Poudel">
+  <link rel="canonical" href="https://about.dhrub.com.np/cases/roster-intelligence.html">
+  <title>Roster Intelligence — Dhruba Poudel</title>
+  <link rel="stylesheet" href="../assets/portfolio.css?v=20261027">
+  <link rel="stylesheet" href="../assets/broader-work.css?v=20261029">
+  <script src="../assets/portfolio.js?v=20261027" defer></script>
+  <style>
+    .sso-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:32px 0 0; border-top:1px solid var(--line); padding-top:24px; }
+    .sso-facts dt { color:var(--teal-dark); font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .sso-facts dd { margin:8px 0 0; color:var(--muted); font-size:.82rem; line-height:1.7; }
+    .sso-flow { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; padding:0; margin:26px 0; list-style:none; }
+    .sso-flow li { margin:0; padding:21px; border:1px solid var(--line); background:var(--white); border-radius:4px; }
+    .sso-flow span { display:block; margin-bottom:10px; color:var(--teal-dark); font-size:.65rem; font-weight:700; letter-spacing:.08em; }
+    .sso-flow strong { display:block; font-size:.88rem; line-height:1.45; }
+    .sso-flow p { margin:10px 0 0; font-size:.77rem; line-height:1.7; }
+    .sso-callout { margin:26px 0; padding:22px 24px; border-left:3px solid var(--teal); background:var(--mint); }
+    .sso-callout h3 { margin:0 0 9px; font-size:.95rem; }
+    .sso-callout p { margin:0; }
+    .sso-table-wrap { overflow-x:auto; margin:24px 0; border:1px solid var(--line); border-radius:4px; }
+    .sso-table-wrap:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+    .sso-table { width:100%; min-width:590px; border-collapse:collapse; font-size:.79rem; line-height:1.7; }
+    .sso-table caption { padding:18px; text-align:left; font-weight:700; color:var(--ink); background:var(--mint); }
+    .sso-table th,.sso-table td { padding:17px 18px; text-align:left; vertical-align:top; border-top:1px solid var(--line); }
+    .sso-table thead th { font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; }
+    .sso-table tbody th { width:26%; font-weight:700; }
+    .sso-table td { color:var(--muted); }
+    .sso-stage { display:block; margin-top:6px; color:var(--teal-dark); font-weight:700; font-size:.7rem; }
+    .sso-caption { max-width:830px; }
+    .sso-download { margin-top:20px; }
+    @media(max-width:700px) { .sso-facts,.sso-flow { grid-template-columns:1fr; gap:15px; } .sso-flow li { padding:20px; } .sso-callout { padding:20px; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html" aria-label="Dhruba Poudel home"><span class="brand-mark" aria-hidden="true">DP</span><span class="brand-name">Dhruba Poudel</span></a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" hidden>Menu</button>
+      <nav class="site-nav" id="site-nav" data-site-nav aria-label="Main navigation">
+        <a href="../index.html#delivery-evidence">Delivery evidence</a><a href="../index.html#work">Selected work</a><a href="../index.html#areas">Work areas</a><a href="../index.html#about">About</a><a class="nav-contact" href="../index.html#contact">Let’s connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="case-hero wrap">
+      <a class="back-link" href="../index.html#delivery-evidence"><span aria-hidden="true">←</span> All delivery evidence</a>
+      <div class="case-hero-grid"><div>
+        <p class="eyebrow">SKGenius · Workforce decision support · In development</p>
+        <h1>Roster intelligence</h1>
+        <p class="case-lead">Find the coverage gap.<br>Make the next action clear.</p>
+        <div class="case-links"><a class="button" href="#contribution">Explore the design <span aria-hidden="true">↓</span></a><a class="text-link" href="#example">See the fictional example <span aria-hidden="true">↓</span></a></div>
+      </div><dl class="case-meta">
+        <div><dt>My contribution</dt><dd>Requirements · Interface and workflow design · HTML/CSS handoff</dd></div>
+        <div><dt>Business context</dt><dd>SKGenius · CRM, HR and service operations</dd></div>
+        <div><dt>Current stage</dt><dd>Design handoff completed · Sample application panel in UAT development</dd></div>
+        <div><dt>Public example</dt><dd>Fictional site records · Original conceptual diagram</dd></div>
+      </dl></div>
+      <dl class="sso-facts">
+        <div><dt>The problem</dt><dd>A busy roster can show balanced total hours while individual sites still have coverage gaps.</dd></div>
+        <div><dt>The design</dt><dd>Bring variance, coverage exceptions and suggested review steps alongside the roster.</dd></div>
+        <div><dt>The next gate</dt><dd>Validate source-data behaviour, integrated checks and any AI-generated guidance through UAT.</dd></div>
+      </dl>
+    </section>
+    <div class="wrap"><figure class="project-screenshot">
+      <a href="../assets/roster-intelligence-20261124.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the original roster-intelligence diagram"><img src="../assets/roster-intelligence-20261124.png" alt="Fictional Site A has 40 contracted and 32 rostered hours; Site B has 40 contracted and 48 rostered hours. Total hours balance but Site A still needs coverage review." width="1200" height="675"></a>
+      <figcaption><span class="sso-caption">Original conceptual illustration. All example values are fictional; operational screenshots and workforce records stay private.</span><span>Dhruba Poudel</span></figcaption>
+    </figure></div>
+    <div class="wrap case-body">
+      <nav class="case-index" aria-label="Case study sections"><h2>Inside the project</h2><ol>
+        <li><a href="#problem">01 · The operational question</a></li><li><a href="#contribution">02 · My contribution</a></li><li><a href="#example">03 · A coverage example</a></li><li><a href="#acceptance">04 · Design acceptance</a></li><li><a href="#stage">05 · Development stage</a></li>
+      </ol></nav>
+      <div class="case-content">
+        <section id="problem"><h2>Which exceptions need a manager’s attention?</h2>
+          <p>SKGenius connects CRM, HR and service operations. Rostering is one of the points where contract requirements, site coverage and workforce activity meet. A useful intelligence layer should help a manager locate a problem, understand the underlying figures and move directly to the relevant review.</p>
+          <p>The initiative brings contracted-versus-rostered hours, coverage gaps and suggested next steps into the existing roster workflow. Its purpose is to support informed operational decisions with clear, inspectable context.</p>
+        </section>
+        <section id="contribution"><h2>Translate operational questions into a usable interface.</h2>
+          <p>My work covers smart-rostering requirements, interface and workflow design, and an HTML/CSS design handoff. I shaped a roster-intelligence sidebar that connects summary cards with focused review actions, keeping the roster itself available for context.</p>
+          <ul><li>Define how contracted and rostered hours should be compared and explained.</li><li>Separate site-level coverage exceptions from the overall hours variance.</li><li>Design suggested review steps that direct attention to the supporting roster context.</li><li>Prepare a responsive interface handoff for application integration and further UAT.</li></ul>
+          <ul class="tags" aria-label="Project skills"><li>Requirements analysis</li><li>Dashboard development</li><li>Data analysis</li><li>Interface design</li><li>HTML / CSS</li><li>Human-reviewed automation</li></ul>
+        </section>
+        <section id="example"><h2>Balanced totals can still hide a site-level gap.</h2>
+          <p>This deliberately small example explains the design principle. It is a fictional illustration, separate from the employer application and its data.</p>
+          <div class="sso-table-wrap" tabindex="0" role="region" aria-label="Fictional hours example; scroll horizontally on small screens"><table class="sso-table">
+            <caption>Fictional example · Hours variance = rostered − contracted</caption><thead><tr><th scope="col">Site</th><th scope="col">Contracted</th><th scope="col">Rostered</th><th scope="col">Variance</th><th scope="col">Review</th></tr></thead>
+            <tbody><tr><th scope="row">Site A</th><td>40 h</td><td>32 h</td><td>−8 h</td><td>Investigate an 8-hour shortfall.</td></tr><tr><th scope="row">Site B</th><td>40 h</td><td>48 h</td><td>+8 h</td><td>Review the extra allocation in its own context.</td></tr><tr><th scope="row">Total</th><td>80 h</td><td>80 h</td><td>0 h</td><td>The net figure conceals the site-level difference.</td></tr></tbody>
+          </table></div>
+          <p>Hours alone do not establish whether the right shift, person or service obligation is covered. A manager still needs the relevant contract, timing and operational context before deciding what to change.</p>
+        </section>
+        <section id="acceptance"><h2>Make the review path testable.</h2>
+          <p>These are proposed acceptance criteria for the integrated capability, rather than a claim of completed application tests:</p>
+          <ol><li>Summary cards and drill-down results use the same reporting period and filters.</li><li>Variance direction and units are explicit, with missing inputs flagged for review.</li><li>Site coverage is evaluated at the appropriate level; overlapping categories are not silently added as unique sites.</li><li>Suggested actions point back to supporting data and preserve the manager’s review step.</li><li>Any AI-generated guidance is assessed separately for factual consistency, usefulness and appropriate handling of workforce information.</li></ol>
+        </section>
+        <section id="stage"><h2>Design delivered. UAT development underway.</h2>
+          <p>The retained design package contains an HTML/CSS interface handoff and a proposed smart-rostering requirements blueprint. The original handoff uses static data and presentation controls. The current sample application panel is still being developed in UAT.</p>
+          <div class="sso-callout"><h3>Calculated checks and AI have distinct validation steps.</h3><p>Contract-hours variance and coverage summaries can be defined as inspectable calculations. AI-supported explanations are a separate part of the initiative. Model execution, integrated acceptance and operational savings remain to be validated.</p></div>
+          <p>The next evidence milestone is an accepted end-to-end UAT run: validated source data, consistent filters, traceable exceptions, reviewed guidance and recorded manager feedback.</p>
+        </section>
+      </div>
+    </div>
+    <section class="next-case"><div class="wrap next-case-inner"><div><span>Continue exploring</span><h2>More of the work behind dependable systems.</h2></div><a class="text-link" href="../index.html#delivery-evidence">Explore delivery evidence <span aria-hidden="true">→</span></a></div></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>© <span data-current-year>2026</span> Dhruba Poudel</span><a href="../index.html#delivery-evidence">Back to delivery evidence <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

@@ -59,10 +59,11 @@ These capabilities match my LinkedIn About and Skills sections. Individual case 
 
 ## Enterprise delivery evidence
 
-Four focused case-study additions connect professional contribution with public, sanitised proof. These are separate from the sixteen-product collection.
+Five focused case studies connect professional contribution with public, sanitised proof. These are separate from the sixteen-product collection.
 
 | Case | Evidence and stage |
 | --- | --- |
+| [SKGenius Roster Intelligence](dist/cases/roster-intelligence.html) | Smart-rostering requirements, interface design and an HTML/CSS handoff. Sample application panel in UAT development; public hours example is fictional. AI execution and operational impact remain separate validation steps. |
 | [Enterprise Identity & SSO Integration](dist/cases/identity-sso-integration.html) | Federation requirements, identity mapping and provider coordination; own-account sign-in validated in September 2026. Illustrative acceptance criteria are labelled separately; wider rollout remains a separate acceptance step. |
 | [AI Document Capture & Validation](dist/cases/ai-document-capture.html) | Zudello input-template and field-mapping configuration and workflow demonstration. Public PO/capture/review examples are fictional; the timing log contains zero measured pairs. |
 | [Supplier Compliance Integration](dist/cases/supplier-compliance-integration.html) | Onboarding requirements, compliance-status mapping and UAT. The retained October 2026 record supports tested/UAT status; the public acceptance examples are fictional. |
